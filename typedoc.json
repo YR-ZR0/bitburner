@@ -1,0 +1,12 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./src", "CustomTypes.d.ts", "NetscriptDefinitions.d.ts"],
+  "out": "doc",
+  "entryPointStrategy": "expand",
+  "skipErrorChecking": true,
+  "watch": true,
+  "name": "Bitburner scripts",
+  "basePath": "./src",
+  "excludePrivate": false,
+  "excludeNotDocumented": false
+}

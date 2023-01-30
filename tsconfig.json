@@ -1,0 +1,31 @@
+{
+  "include": ["NetscriptDefinitions.d.ts", "CustomTypes.d.ts", "src/**/*"],
+  "exclude": ["arcade/**/*"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "noImplicitReturns": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "rootDir": "src/",
+    "outDir": "dist/",
+    "baseUrl": "src/",
+    "allowJs": true,
+    "checkJs": true,
+    "paths": {
+      "/*": ["*"],
+      "@ns": ["../NetscriptDefinitions.d.ts"]
+    }
+  }
+}
