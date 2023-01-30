@@ -1,0 +1,643 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Hacknet | Bitburner scripts</title><meta name="description" content="Documentation for Bitburner scripts"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script async src="../assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base="..">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">Bitburner scripts</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-8 col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb">
+<li><a href="../modules.html">Bitburner scripts</a></li>
+<li><a href="../modules/___NetscriptDefinitions.html">../NetscriptDefinitions</a></li>
+<li><a href="___NetscriptDefinitions.Hacknet.html">Hacknet</a></li></ul>
+<h1>Interface Hacknet</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>Hacknet API</p>
+
+<h3>Remarks</h3><p>Not all these functions are immediately available.</p>
+</div></section>
+<section class="tsd-panel tsd-hierarchy">
+<h4>Hierarchy</h4>
+<ul class="tsd-hierarchy">
+<li><span class="target">Hacknet</span></li></ul></section><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2327</li></ul></aside>
+<section class="tsd-panel-group tsd-index-group">
+<section class="tsd-panel tsd-index-panel">
+<details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
+<h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex=0><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 5.50969L8 11.6609L14.5 5.50969L12.5466 3.66086L8 7.96494L3.45341 3.66086L1.5 5.50969Z" fill="var(--color-text)"></path></svg> Index</h5></summary>
+<div class="tsd-accordion-details">
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Methods</h3>
+<div class="tsd-index-list"><a href="___NetscriptDefinitions.Hacknet.html#getCacheUpgradeCost" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-2048-path"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)" id="icon-2048-text"></path></svg><span>get<wbr/>Cache<wbr/>Upgrade<wbr/>Cost</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#getCoreUpgradeCost" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Core<wbr/>Upgrade<wbr/>Cost</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#getHashUpgradeLevel" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Hash<wbr/>Upgrade<wbr/>Level</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#getHashUpgrades" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Hash<wbr/>Upgrades</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#getLevelUpgradeCost" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Level<wbr/>Upgrade<wbr/>Cost</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#getNodeStats" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Node<wbr/>Stats</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#getPurchaseNodeCost" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Purchase<wbr/>Node<wbr/>Cost</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#getRamUpgradeCost" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Ram<wbr/>Upgrade<wbr/>Cost</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#getStudyMult" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Study<wbr/>Mult</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#getTrainingMult" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Training<wbr/>Mult</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#hashCapacity" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>hash<wbr/>Capacity</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#hashCost" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>hash<wbr/>Cost</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#maxNumNodes" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>max<wbr/>Num<wbr/>Nodes</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#numHashes" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>num<wbr/>Hashes</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#numNodes" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>num<wbr/>Nodes</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#purchaseNode" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>purchase<wbr/>Node</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#spendHashes" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>spend<wbr/>Hashes</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#upgradeCache" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>upgrade<wbr/>Cache</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#upgradeCore" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>upgrade<wbr/>Core</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#upgradeLevel" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>upgrade<wbr/>Level</span></a>
+<a href="___NetscriptDefinitions.Hacknet.html#upgradeRam" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>upgrade<wbr/>Ram</span></a>
+</div></section></div></details></section></section>
+<section class="tsd-panel-group tsd-member-group">
+<h2>Methods</h2>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getCacheUpgradeCost" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Cache<wbr/>Upgrade<wbr/>Cost</span><a href="#getCacheUpgradeCost" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getCacheUpgradeCost.getCacheUpgradeCost-1">get<wbr/>Cache<wbr/>Upgrade<wbr/>Cost<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getCacheUpgradeCost.getCacheUpgradeCost-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Calculate the cost of upgrading hacknet node cache.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+<p>Returns the cost of upgrading the cache level of the specified Hacknet Server by n.</p>
+<p>If an invalid value for n is provided, then this function returns 0.
+If the specified Hacknet Node is already at max level, then Infinity is returned.</p>
+
+<h3>Returns</h3><p>Cost of upgrading the specified Hacknet Node&#39;s cache.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Index/Identifier of Hacknet Node.</p>
+</div></li>
+<li>
+<h5>n: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of times to upgrade cache. Must be positive. Rounded to nearest integer.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2531</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getCoreUpgradeCost" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Core<wbr/>Upgrade<wbr/>Cost</span><a href="#getCoreUpgradeCost" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getCoreUpgradeCost.getCoreUpgradeCost-1">get<wbr/>Core<wbr/>Upgrade<wbr/>Cost<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getCoreUpgradeCost.getCoreUpgradeCost-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Calculate the cost of upgrading hacknet node cores.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Returns the cost of upgrading the number of cores of the specified Hacknet Node by n.</p>
+<p>If an invalid value for n is provided, then this function returns 0.
+If the specified Hacknet Node is already at max level, then Infinity is returned.</p>
+
+<h3>Returns</h3><p>Cost of upgrading the specified Hacknet Node&#39;s number of cores.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Index/Identifier of Hacknet Node.</p>
+</div></li>
+<li>
+<h5>n: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of times to upgrade cores. Must be positive. Rounded to nearest integer.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2513</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getHashUpgradeLevel" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Hash<wbr/>Upgrade<wbr/>Level</span><a href="#getHashUpgradeLevel" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getHashUpgradeLevel.getHashUpgradeLevel-1">get<wbr/>Hash<wbr/>Upgrade<wbr/>Level<span class="tsd-signature-symbol">(</span>upgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getHashUpgradeLevel.getHashUpgradeLevel-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the level of a hash upgrade.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+
+<h3>Returns</h3><p>Level of the upgrade.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>upgName: <span class="tsd-signature-type">string</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2655</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getHashUpgrades" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Hash<wbr/>Upgrades</span><a href="#getHashUpgrades" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getHashUpgrades.getHashUpgrades-1">get<wbr/>Hash<wbr/>Upgrades<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><a href="#getHashUpgrades.getHashUpgrades-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the list of hash upgrades</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+<p>Returns the list of all available hash upgrades that can be used in the spendHashes function.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-6">// NS1:</span><br/><span class="hl-5">var</span><span class="hl-0"> </span><span class="hl-3">upgrades</span><span class="hl-0"> = </span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">getHashUpgrades</span><span class="hl-0">(); </span><span class="hl-6">// [&quot;Sell for Money&quot;,&quot;Sell for Corporation Funds&quot;,...]</span>
+</code></pre>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-6">// NS2:</span><br/><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-8">upgrades</span><span class="hl-0"> = </span><span class="hl-3">ns</span><span class="hl-0">.</span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">getHashUpgrades</span><span class="hl-0">(); </span><span class="hl-6">// [&quot;Sell for Money&quot;,&quot;Sell for Corporation Funds&quot;,...]</span>
+</code></pre>
+
+<h3>Returns</h3><p>An array containing the available upgrades</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2644</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getLevelUpgradeCost" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Level<wbr/>Upgrade<wbr/>Cost</span><a href="#getLevelUpgradeCost" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getLevelUpgradeCost.getLevelUpgradeCost-1">get<wbr/>Level<wbr/>Upgrade<wbr/>Cost<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getLevelUpgradeCost.getLevelUpgradeCost-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Calculate the cost of upgrading hacknet node levels.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Returns the cost of upgrading the specified Hacknet Node by n levels.</p>
+<p>If an invalid value for n is provided, then this function returns 0.
+If the specified Hacknet Node is already at max level, then Infinity is returned.</p>
+
+<h3>Returns</h3><p>Cost of upgrading the specified Hacknet Node.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Index/Identifier of Hacknet Node.</p>
+</div></li>
+<li>
+<h5>n: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of levels to upgrade. Must be positive. Rounded to nearest integer.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2481</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getNodeStats" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Node<wbr/>Stats</span><a href="#getNodeStats" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getNodeStats.getNodeStats-1">get<wbr/>Node<wbr/>Stats<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="___NetscriptDefinitions.NodeStats.html" class="tsd-signature-type" data-tsd-kind="Interface">NodeStats</a><a href="#getNodeStats.getNodeStats-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the stats of a hacknet node.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Returns an object containing a variety of stats about the specified Hacknet Node.</p>
+<p>Note that for Hacknet Nodes, production refers to the amount of money the node generates.
+For Hacknet Servers (the upgraded version of Hacknet Nodes), production refers to the
+amount of hashes the node generates.</p>
+
+<h3>Returns</h3><p>Object containing a variety of stats about the specified Hacknet Node.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Index/Identifier of Hacknet Node</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="___NetscriptDefinitions.NodeStats.html" class="tsd-signature-type" data-tsd-kind="Interface">NodeStats</a></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2389</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getPurchaseNodeCost" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Purchase<wbr/>Node<wbr/>Cost</span><a href="#getPurchaseNodeCost" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getPurchaseNodeCost.getPurchaseNodeCost-1">get<wbr/>Purchase<wbr/>Node<wbr/>Cost<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getPurchaseNodeCost.getPurchaseNodeCost-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the price of the next hacknet node.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Returns the cost of purchasing a new Hacknet Node.</p>
+
+<h3>Returns</h3><p>Cost of purchasing a new Hacknet Node.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2373</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getRamUpgradeCost" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Ram<wbr/>Upgrade<wbr/>Cost</span><a href="#getRamUpgradeCost" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getRamUpgradeCost.getRamUpgradeCost-1">get<wbr/>Ram<wbr/>Upgrade<wbr/>Cost<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getRamUpgradeCost.getRamUpgradeCost-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Calculate the cost of upgrading hacknet node RAM.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Returns the cost of upgrading the RAM of the specified Hacknet Node n times.</p>
+<p>If an invalid value for n is provided, then this function returns 0.
+If the specified Hacknet Node already has max RAM, then Infinity is returned.</p>
+
+<h3>Returns</h3><p>Cost of upgrading the specified Hacknet Node&#39;s RAM.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Index/Identifier of Hacknet Node.</p>
+</div></li>
+<li>
+<h5>n: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of times to upgrade RAM. Must be positive. Rounded to nearest integer.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2497</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getStudyMult" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Study<wbr/>Mult</span><a href="#getStudyMult" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getStudyMult.getStudyMult-1">get<wbr/>Study<wbr/>Mult<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getStudyMult.getStudyMult-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the multiplier to study.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+
+<h3>Returns</h3><p>Multiplier.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2666</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getTrainingMult" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Training<wbr/>Mult</span><a href="#getTrainingMult" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="getTrainingMult.getTrainingMult-1">get<wbr/>Training<wbr/>Mult<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getTrainingMult.getTrainingMult-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the multiplier to training.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+
+<h3>Returns</h3><p>Multiplier.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2677</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="hashCapacity" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>hash<wbr/>Capacity</span><a href="#hashCapacity" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="hashCapacity.hashCapacity-1">hash<wbr/>Capacity<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#hashCapacity.hashCapacity-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the maximum number of hashes you can store.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+<p>Returns the number of hashes you can store.</p>
+
+<h3>Returns</h3><p>Number of hashes you can store.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2557</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="hashCost" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>hash<wbr/>Cost</span><a href="#hashCost" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="hashCost.hashCost-1">hash<wbr/>Cost<span class="tsd-signature-symbol">(</span>upgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#hashCost.hashCost-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the cost of a hash upgrade.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+<p>Returns the number of hashes required for the specified upgrade. The name of the upgrade must be an exact match.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-6">// NS1:</span><br/><span class="hl-5">var</span><span class="hl-0"> </span><span class="hl-3">upgradeName</span><span class="hl-0"> = </span><span class="hl-4">&quot;Sell for Corporation Funds&quot;</span><span class="hl-0">;</span><br/><span class="hl-2">if</span><span class="hl-0"> (</span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">numHashes</span><span class="hl-0">() &gt; </span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">hashCost</span><span class="hl-0">(</span><span class="hl-3">upgradeName</span><span class="hl-0">)) {</span><br/><span class="hl-0">   </span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">spendHashes</span><span class="hl-0">(</span><span class="hl-3">upgradeName</span><span class="hl-0">);</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-6">// NS2:</span><br/><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-8">upgradeName</span><span class="hl-0"> = </span><span class="hl-4">&quot;Sell for Corporation Funds&quot;</span><span class="hl-0">;</span><br/><span class="hl-2">if</span><span class="hl-0"> (</span><span class="hl-3">ns</span><span class="hl-0">.</span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">numHashes</span><span class="hl-0">() &gt; </span><span class="hl-3">ns</span><span class="hl-0">.</span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">hashCost</span><span class="hl-0">(</span><span class="hl-3">upgradeName</span><span class="hl-0">)) {</span><br/><span class="hl-0">   </span><span class="hl-3">ns</span><span class="hl-0">.</span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">spendHashes</span><span class="hl-0">(</span><span class="hl-3">upgradeName</span><span class="hl-0">);</span><br/><span class="hl-0">}</span>
+</code></pre>
+
+<h3>Returns</h3><p>Number of hashes required for the specified upgrade.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>upgName: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Name of the upgrade of Hacknet Node.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> count: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of upgrades to buy at once. Defaults to 1 if not specified.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2588</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="maxNumNodes" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>max<wbr/>Num<wbr/>Nodes</span><a href="#maxNumNodes" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="maxNumNodes.maxNumNodes-1">max<wbr/>Num<wbr/>Nodes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#maxNumNodes.maxNumNodes-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the maximum number of hacknet nodes.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+
+<h3>Returns</h3><p>Maximum number of hacknet nodes.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2346</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="numHashes" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>num<wbr/>Hashes</span><a href="#numHashes" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="numHashes.numHashes-1">num<wbr/>Hashes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#numHashes.numHashes-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the total number of hashes stored.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+<p>Returns the number of hashes you have.</p>
+
+<h3>Returns</h3><p>Number of hashes you have.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2544</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="numNodes" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>num<wbr/>Nodes</span><a href="#numNodes" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="numNodes.numNodes-1">num<wbr/>Nodes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#numNodes.numNodes-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the number of hacknet nodes you own.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Returns the number of Hacknet Nodes you own.</p>
+
+<h3>Returns</h3><p>Number of hacknet nodes.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2337</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="purchaseNode" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>purchase<wbr/>Node</span><a href="#purchaseNode" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="purchaseNode.purchaseNode-1">purchase<wbr/>Node<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#purchaseNode.purchaseNode-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Purchase a new hacknet node.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Purchases a new Hacknet Node. Returns a number with the index of the
+Hacknet Node. This index is equivalent to the number at the end of
+the Hacknet Node’s name (e.g The Hacknet Node named <code>hacknet-node-4</code>
+will have an index of 4).</p>
+<p>If the player cannot afford to purchase a new Hacknet Node then the function will return -1.</p>
+
+<h3>Returns</h3><p>The index of the Hacknet Node or if the player cannot afford to purchase a new Hacknet Node the function will return -1.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2362</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="spendHashes" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>spend<wbr/>Hashes</span><a href="#spendHashes" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="spendHashes.spendHashes-1">spend<wbr/>Hashes<span class="tsd-signature-symbol">(</span>upgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, upgTarget<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#spendHashes.spendHashes-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Purchase a hash upgrade.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+<p>Spend the hashes generated by your Hacknet Servers on an upgrade.
+Returns a boolean value - true if the upgrade is successfully purchased, and false otherwise.</p>
+<p>The name of the upgrade must be an exact match.
+The <code>upgTarget</code> argument is used for upgrades such as <code>Reduce Minimum Security</code>, which applies to a specific server.
+In this case, the <code>upgTarget</code> argument must be the hostname of the server.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-6">// NS1:</span><br/><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">spendHashes</span><span class="hl-0">(</span><span class="hl-4">&quot;Sell for Corporation Funds&quot;</span><span class="hl-0">);</span><br/><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">spendHashes</span><span class="hl-0">(</span><span class="hl-4">&quot;Increase Maximum Money&quot;</span><span class="hl-0">, </span><span class="hl-4">&quot;foodnstuff&quot;</span><span class="hl-0">);</span>
+</code></pre>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-9">NS2</span><span class="hl-0">:</span><br/><span class="hl-3">ns</span><span class="hl-0">.</span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">spendHashes</span><span class="hl-0">(</span><span class="hl-4">&quot;Sell for Corporation Funds&quot;</span><span class="hl-0">);</span><br/><span class="hl-3">ns</span><span class="hl-0">.</span><span class="hl-3">hacknet</span><span class="hl-0">.</span><span class="hl-1">spendHashes</span><span class="hl-0">(</span><span class="hl-4">&quot;Increase Maximum Money&quot;</span><span class="hl-0">, </span><span class="hl-4">&quot;foodnstuff&quot;</span><span class="hl-0">);</span>
+</code></pre>
+
+<h3>Returns</h3><p>True if the upgrade is successfully purchased, and false otherwise.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>upgName: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Name of the upgrade of Hacknet Node.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> upgTarget: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Object to which upgrade applies. Required for certain upgrades.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> count: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of upgrades to buy at once. Defaults to 1 if not specified.
+For compatibility reasons, upgTarget must be specified, even if it is not used, in order to specify count.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2622</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="upgradeCache" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>upgrade<wbr/>Cache</span><a href="#upgradeCache" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="upgradeCache.upgradeCache-1">upgrade<wbr/>Cache<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#upgradeCache.upgradeCache-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Upgrade the cache of a hacknet node.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>This function is only applicable for Hacknet Servers (the upgraded version of a Hacknet Node).</p>
+<p>Tries to upgrade the specified Hacknet Server’s cache n times.</p>
+<p>Returns true if it successfully upgrades the Server’s cache n times,
+or if it purchases some positive amount and the Server reaches its max cache level.</p>
+<p>Returns false otherwise.</p>
+
+<h3>Returns</h3><p>True if the Hacknet Node’s cache level is successfully upgraded, false otherwise.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Index/Identifier of Hacknet Node.</p>
+</div></li>
+<li>
+<h5>n: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of cache levels to purchase. Must be positive. Rounded to nearest integer.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2465</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="upgradeCore" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>upgrade<wbr/>Core</span><a href="#upgradeCore" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="upgradeCore.upgradeCore-1">upgrade<wbr/>Core<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#upgradeCore.upgradeCore-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Upgrade the core of a hacknet node.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Tries to purchase n cores for the specified Hacknet Node.</p>
+<p>Returns true if it successfully purchases n cores for the Hacknet Node
+or if it purchases some positive amount and the Node reaches its max number of cores.</p>
+<p>Returns false otherwise.</p>
+
+<h3>Returns</h3><p>True if the Hacknet Node’s cores are successfully purchased, false otherwise.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Index/Identifier of Hacknet Node.</p>
+</div></li>
+<li>
+<h5>n: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of cores to purchase. Must be positive. Rounded to nearest integer.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2445</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="upgradeLevel" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>upgrade<wbr/>Level</span><a href="#upgradeLevel" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="upgradeLevel.upgradeLevel-1">upgrade<wbr/>Level<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#upgradeLevel.upgradeLevel-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Upgrade the level of a hacknet node.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Tries to upgrade the level of the specified Hacknet Node by n.</p>
+<p>Returns true if the Hacknet Node’s level is successfully upgraded by n
+or if it is upgraded by some positive amount and the Node reaches its max level.</p>
+<p>Returns false otherwise.</p>
+
+<h3>Returns</h3><p>True if the Hacknet Node’s level is successfully upgraded, false otherwise.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Index/Identifier of Hacknet Node.</p>
+</div></li>
+<li>
+<h5>n: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of levels to purchase. Must be positive. Rounded to nearest integer.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2407</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="upgradeRam" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>upgrade<wbr/>Ram</span><a href="#upgradeRam" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="upgradeRam.upgradeRam-1">upgrade<wbr/>Ram<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#upgradeRam.upgradeRam-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Upgrade the RAM of a hacknet node.</p>
+
+<h3>Remarks</h3><p>RAM cost: 0 GB</p>
+<p>Tries to upgrade the specified Hacknet Node’s RAM n times.
+Note that each upgrade doubles the Node’s RAM.
+So this is equivalent to multiplying the Node’s RAM by 2 n.</p>
+<p>Returns true if the Hacknet Node’s RAM is successfully upgraded n times
+or if it is upgraded some positive number of times and the Node reaches its max RAM.</p>
+<p>Returns false otherwise.</p>
+
+<h3>Returns</h3><p>True if the Hacknet Node’s RAM is successfully upgraded, false otherwise.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>index: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Index/Identifier of Hacknet Node.</p>
+</div></li>
+<li>
+<h5>n: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of times to upgrade RAM. Must be positive. Rounded to nearest integer.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:2427</li></ul></aside></li></ul></section></section></div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<nav class="tsd-navigation primary">
+<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li class="current"><a href="../modules.html">Bitburner scripts</a>
+<ul>
+<li class="tsd-kind-module"><a href="../modules/___CustomTypes.html">../<wbr/>Custom<wbr/>Types</a></li>
+<li class="current tsd-kind-module"><a href="../modules/___NetscriptDefinitions.html">../<wbr/>Netscript<wbr/>Definitions</a></li>
+<li class="tsd-kind-module"><a href="../modules/NoRam.html">No<wbr/>Ram</a></li>
+<li class="tsd-kind-module"><a href="../modules/NoRamServer.html">No<wbr/>Ram<wbr/>Server</a></li>
+<li class="tsd-kind-module"><a href="../modules/Story.html">Story</a></li>
+<li class="tsd-kind-module"><a href="../modules/aggressive.html">aggressive</a></li>
+<li class="tsd-kind-module"><a href="../modules/checkPurchase.html">check<wbr/>Purchase</a></li>
+<li class="tsd-kind-module"><a href="../modules/clearQueue.html">clear<wbr/>Queue</a></li>
+<li class="tsd-kind-module"><a href="../modules/cnccmd.html">cnccmd</a></li>
+<li class="tsd-kind-module"><a href="../modules/common.html">common</a></li>
+<li class="tsd-kind-module"><a href="../modules/doomslayer.html">doomslayer</a></li>
+<li class="tsd-kind-module"><a href="../modules/find.html">find</a></li>
+<li class="tsd-kind-module"><a href="../modules/infiltrate.html">infiltrate</a></li>
+<li class="tsd-kind-module"><a href="../modules/killall.html">killall</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_darkweb.html">lategame/darkweb</a></li>
+<li class="tsd-kind-module"><a href="../modules/listen.html">listen</a></li>
+<li class="tsd-kind-module"><a href="../modules/ls.html">ls</a></li>
+<li class="tsd-kind-module"><a href="../modules/makepurchase.html">makepurchase</a></li>
+<li class="tsd-kind-module"><a href="../modules/manager.html">manager</a></li>
+<li class="tsd-kind-module"><a href="../modules/netUpgrade.html">net<wbr/>Upgrade</a></li>
+<li class="tsd-kind-module"><a href="../modules/numberFormat.html">number<wbr/>Format</a></li>
+<li class="tsd-kind-module"><a href="../modules/odinManager.html">odin<wbr/>Manager</a></li>
+<li class="tsd-kind-module"><a href="../modules/remoteKill.html">remote<wbr/>Kill</a></li>
+<li class="tsd-kind-module"><a href="../modules/ripntear.html">ripntear</a></li>
+<li class="tsd-kind-module"><a href="../modules/selfHack.html">self<wbr/>Hack</a></li>
+<li class="tsd-kind-module"><a href="../modules/share.html">share</a></li>
+<li class="tsd-kind-module"><a href="../modules/solvers_factor.html">solvers/factor</a></li>
+<li class="tsd-kind-module"><a href="../modules/solvers_lzdecomp.html">solvers/lzdecomp</a></li>
+<li class="tsd-kind-module"><a href="../modules/solvers_maxarray.html">solvers/maxarray</a></li>
+<li class="tsd-kind-module"><a href="../modules/solvers_stockcalc.html">solvers/stockcalc</a></li>
+<li class="tsd-kind-module"><a href="../modules/stats_broker.html">stats/broker</a></li>
+<li class="tsd-kind-module"><a href="../modules/stats_figure.html">stats/figure</a></li>
+<li class="tsd-kind-module"><a href="../modules/stats_monitor.html">stats/monitor</a></li>
+<li class="tsd-kind-module"><a href="../modules/stats_storyui.html">stats/storyui</a></li>
+<li class="tsd-kind-module"><a href="../modules/stocks.html">stocks</a></li></ul></li></ul></div></details></nav>
+<nav class="tsd-navigation secondary menu-sticky">
+<ul>
+<li class="current tsd-kind-interface tsd-parent-kind-module"><a href="___NetscriptDefinitions.Hacknet.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-256-path"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)" id="icon-256-text"></path></svg><span>Hacknet</span></a>
+<ul>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getCacheUpgradeCost" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Cache<wbr/>Upgrade<wbr/>Cost</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getCoreUpgradeCost" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Core<wbr/>Upgrade<wbr/>Cost</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getHashUpgradeLevel" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Hash<wbr/>Upgrade<wbr/>Level</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getHashUpgrades" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Hash<wbr/>Upgrades</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getLevelUpgradeCost" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Level<wbr/>Upgrade<wbr/>Cost</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getNodeStats" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Node<wbr/>Stats</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getPurchaseNodeCost" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Purchase<wbr/>Node<wbr/>Cost</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getRamUpgradeCost" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Ram<wbr/>Upgrade<wbr/>Cost</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getStudyMult" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Study<wbr/>Mult</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#getTrainingMult" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Training<wbr/>Mult</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#hashCapacity" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>hash<wbr/>Capacity</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#hashCost" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>hash<wbr/>Cost</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#maxNumNodes" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>max<wbr/>Num<wbr/>Nodes</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#numHashes" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>num<wbr/>Hashes</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#numNodes" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>num<wbr/>Nodes</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#purchaseNode" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>purchase<wbr/>Node</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#spendHashes" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>spend<wbr/>Hashes</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#upgradeCache" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>upgrade<wbr/>Cache</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#upgradeCore" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>upgrade<wbr/>Core</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#upgradeLevel" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>upgrade<wbr/>Level</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.Hacknet.html#upgradeRam" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>upgrade<wbr/>Ram</a></li></ul></li></ul></nav></div></div>
+<div class="container tsd-generator">
+<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<div class="overlay"></div><script src="../assets/main.js"></script></body></html>
