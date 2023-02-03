@@ -30,7 +30,9 @@ async function runner(ns: NS, stats: StatPayload, trigger: actionFlags) {
         await ns.weaken(stats.host, { threads: threads });
         break;
       case "grow":
-        await ns.grow(stats.host, { threads: threads });
+        for (let index = 0; index < 1; index++) {
+          await ns.grow(stats.host, { threads: threads });
+        }
         break;
       case "hunt":
         await ns.hack(stats.host, { threads: threads });
