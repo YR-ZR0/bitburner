@@ -5,6 +5,13 @@
  */
 
 import { NS } from "@ns";
+
+export function autocomplete(data: {
+  flags: (flags: string[][]) => string[][];
+}) {
+  return [data.flags([["money"], ["interval"]])];
+}
+
 /**
  *  checkListener ensures that listen is up and running
  * @param ns - the ns import
@@ -39,8 +46,10 @@ export function daemon(ns: NS, interval: number, initTime: Date) {
  *
  * @param {NS} ns */
 export async function main(ns: NS) {
-  const interval = 5000;
-  ns.disableLog("ALL");
+  const data = ns.flags([["interval", 5000]]);
+
+  const interval = data.interval as number;
+  // ns.disableLog("ALL");
   ns.print("Starting Daemon...");
   ns.print("Starting Listener...");
   checkListener(ns);

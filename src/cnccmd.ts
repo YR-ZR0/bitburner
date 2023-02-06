@@ -4,11 +4,20 @@
 import { cncCmd } from "./../CustomTypes.d";
 import { NS } from "@ns";
 
+export function autocomplete(data: {
+  flags: (flags: string[][]) => string[][];
+}) {
+  return [data.flags([["money"]])];
+}
+
 /** @param {NS} ns */
 export async function main(ns: NS) {
+  const data = ns.flags([["money", 700000]]);
   const cncPort = ns.getPortHandle(3);
-  const command: cncCmd = { securityThres: 0.5, moneyThres: 500000 };
+  const command: cncCmd = {
+    securityThres: 0.5,
+    moneyThres: data.money as number,
+  };
   const comandString = JSON.stringify(command);
-
   cncPort.tryWrite(comandString);
 }

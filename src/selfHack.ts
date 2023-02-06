@@ -51,7 +51,15 @@ async function decider(ns: NS, moneyThres: number) {
   const remain = ns.getServerMoneyAvailable(host);
   const max = ns.getServerMaxMoney(host);
   const chance = ns.hackAnalyzeChance(host);
-  const securityThres = 0.5;
+  let securityThres = 0.5;
+
+  if (!cncPort.empty()) {
+    const cncData = cncPort.peek() as string;
+    const cncJson: cncCmd = JSON.parse(cncData);
+    ns.print(cncJson);
+    moneyThres = cncJson.moneyThres;
+    securityThres = cncJson.securityThres;
+  }
   if (moneyThres > max) {
     moneyThres = max / 2;
   }
@@ -64,12 +72,7 @@ async function decider(ns: NS, moneyThres: number) {
     grow: false,
     hunt: false,
   };
-  //TODO: process command
-  if (!cncPort.empty()) {
-    const cncData = cncPort.read() as string;
-    const cncJson: cncCmd = JSON.parse(cncData);
-    ns.print(cncJson);
-  }
+
   const stats: StatPayload = {
     host: host,
     remain: remain,
@@ -91,7 +94,9 @@ async function decider(ns: NS, moneyThres: number) {
 
 /** @param {NS} ns */
 export async function main(ns: NS) {
-  const moneyThres = 500000;
+  ns.disableLog("ALL");
+
+  const moneyThres = 700000;
   // eslint-disable-next-line no-constant-condition
   while (true) {
     await decider(ns, moneyThres);

@@ -14,7 +14,7 @@ const members = new Map<string, memberStat>();
 export function autocomplete(data: {
   flags: (flags: string[][]) => string[][];
 }) {
-  return [data.flags([["keep"]])];
+  return [data.flags([["keep"], ["monitor"]])];
 }
 
 function stattracker(ns: NS, general: GangGenInfo, keep: number) {
@@ -74,13 +74,20 @@ function upgrader(ns: NS, names: string[], keep: number) {
 
 export async function main(ns: NS) {
   ns.disableLog("ALL");
-  const data = ns.flags([["keep", 0]]);
+  const data = ns.flags([
+    ["keep", 0],
+    ["monitor", false],
+  ]);
 
   // eslint-disable-next-line no-constant-condition
   while (true) {
     const general = ns.gang.getGangInformation();
     const names = ns.gang.getMemberNames();
-    upgrader(ns, names, data.keep as number);
+    if (!data.monitor) {
+      upgrader(ns, names, data.keep as number);
+    } else {
+      builder(ns, names);
+    }
     stattracker(ns, general, data.keep as number);
     await ns.sleep(400);
     ns.clearLog();

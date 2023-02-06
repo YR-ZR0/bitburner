@@ -205,6 +205,21 @@ export async function cncpayload(
 }
 
 /**
+ * getBudget allows a app to get it's budget from the budget file
+ * this allows us to set global limits on app spending
+ * @param appName - key to look up
+ * @param ns - NS import
+ */
+export function getBudget(ns: NS, appName: string): string | number {
+  const budgetFile = "budgets.txt";
+  if (ns.fileExists(budgetFile)) {
+    const fileContent = ns.read(budgetFile);
+    return JSON.parse(fileContent)[appName];
+  } else {
+    throw new Error("Key file not found");
+  }
+}
+/**
  * Send a die action to deregister the host
  * @param host
  * @param port
