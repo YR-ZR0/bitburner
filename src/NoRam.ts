@@ -3,19 +3,7 @@
  * and attacks them with a basic attack loop
  */
 import { NS } from "@ns";
-import { maxCopies } from "common";
-
-async function decide(ns: NS, host: string) {
-  const chance = ns.hackAnalyzeChance(host);
-  ns.print(chance);
-  ns.print(host);
-  if (chance !== 1) {
-    ns.printf("Weakening host %s", host);
-    await ns.weaken(host);
-  }
-  await ns.hack(host);
-  await ns.grow(host);
-}
+import { decider } from "common";
 
 /** @param {NS} ns */
 export async function main(ns: NS) {
@@ -25,9 +13,7 @@ export async function main(ns: NS) {
     for (const line in noRam) {
       const host = noRam[line];
       if (host !== "") {
-        await decide(ns, host);
-      } else {
-        ns.print("Empty line detected. Skipping...");
+        await decider(ns, 7000000, true, false, host);
       }
     }
   }

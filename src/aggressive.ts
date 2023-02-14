@@ -7,7 +7,7 @@
  * run aggressive -t 200 --target n00dles
  * ```
  */
-import { maxCopies } from "common";
+import { decider, maxCopies } from "common";
 import { NS } from "@ns";
 
 export function autocomplete(data: {
@@ -24,10 +24,9 @@ export async function main(ns: NS) {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const max = maxCopies(ns, ns.getRunningScript()!.filename, ns.getHostname());
   ns.tprint(max);
+  const moneyThres = 70000000;
   // eslint-disable-next-line no-constant-condition
   while (true) {
-    await ns.hack(data.target.toString());
-    await ns.grow(data.target.toString());
-    await ns.weaken(data.target.toString());
+    await decider(ns, moneyThres, true, false, data.target as string);
   }
 }
