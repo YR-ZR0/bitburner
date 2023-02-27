@@ -15,7 +15,6 @@ async function build(ns: NS) {
     result = Math.pow(2, i);
     const cost = ns.getPurchasedServerCost(result);
     serverList.set(result, cost);
-    await ns.sleep(200);
     i++;
   } while (result < max);
   return serverList;
