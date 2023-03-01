@@ -6,7 +6,7 @@
 
 import { NS } from "@ns";
 import { mapout, sendCommand } from "common";
-import { storyTarget } from "../CustomTypes";
+import { storyTarget } from "../types/CustomTypes";
 
 const targetSpecs: Record<string, storyTarget> = {
   CSEC: { lvl: 58, needed: 1 },

@@ -2,7 +2,7 @@
  * storyui prints out a nice summary of how far you are through the milestones
  * @module
  */
-import { CheckMark } from "../../CustomTypes";
+import { CheckMark } from "../../types/CustomTypes";
 import { NS, Player } from "@ns";
 // Total steps needed to be ready to ascend
 const maxProgress = 6;
@@ -67,7 +67,7 @@ function genUI(ns: NS) {
       });
     ns.tprintf("%s", "\n");
   });
-  ns.tprintf("%s", ns.nFormat(progress / maxProgress, "(0.00)%"));
+  ns.tprintf("%s", ns.formatPercent(progress / maxProgress));
 }
 
 export async function main(ns: NS) {

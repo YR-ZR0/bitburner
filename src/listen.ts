@@ -3,9 +3,9 @@
  * then pretty prints it to the logs in a table
  */
 
-import { parsePayload, StatPayload } from "./../CustomTypes.d";
+import { parsePayload, StatPayload } from "../types/CustomTypes";
 import { NS } from "@ns";
-import { showDiff } from "common";
+import { formatMoney, showDiff } from "common";
 
 const globalState = new Map();
 
@@ -57,10 +57,10 @@ function dispatchMessage(ns: NS, queueStatus: string) {
       row,
       host,
       stat.action,
-      ns.nFormat(stat.chance, "%0.00"),
-      ns.nFormat(stat.remain, "$0.00a"),
-      ns.nFormat(stat.thres, "$0.00a"),
-      ns.nFormat(stat.max, "$0.00a"),
+      ns.formatPercent(stat.chance),
+      formatMoney(ns, stat.remain),
+      formatMoney(ns, stat.thres),
+      formatMoney(ns, stat.max),
       ns.sprintf(
         "Hrs: %(hr)s Mins: %(min)s Secs: %(sec)s",
         showDiff(now, stat.stamp)

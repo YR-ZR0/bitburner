@@ -1,4 +1,4 @@
-import { NodeStats } from "./NetscriptDefinitions.d";
+import { NodeStats } from "../NetscriptDefinitions";
 
 export interface StatPayload {
   host: string;

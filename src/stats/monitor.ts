@@ -35,10 +35,10 @@ export async function main(ns: NS) {
     ns.clearLog();
     ns.print(`${server}:`);
     ns.print(
-      ` $_______: ${ns.nFormat(money, "$0.000a")} / ${ns.nFormat(
-        maxMoney,
-        "$0.000a"
-      )} (${((money / maxMoney) * 100).toFixed(2)}%)`
+      ` $_______: ${ns.formatNumber(money)} / ${ns.formatNumber(maxMoney)} (${(
+        (money / maxMoney) *
+        100
+      ).toFixed(2)}%)`
     );
     ns.print(` security: +${(sec - minSec).toFixed(2)}`);
     ns.print(
@@ -56,8 +56,8 @@ export async function main(ns: NS) {
         (sec - minSec) * 20
       )})`
     );
-    // @ts-expect-error: Because a flag can be anything this throws an error but the data is correct
-    await ns.sleep(flags.refreshrate);
+
+    await ns.sleep(flags.refreshrate as number);
   }
 }
 

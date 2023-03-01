@@ -2,9 +2,9 @@
  * manager gets the income of scripts from all breached hosts
  */
 
-import { ScriptIncome } from "./../CustomTypes.d";
+import { ScriptIncome } from "../types/CustomTypes";
 import { NS } from "@ns";
-import { spider } from "./common";
+import { formatMoney, spider } from "./common";
 /** @param {NS} ns */
 
 const globalHosts: ScriptIncome[] = [];
@@ -13,8 +13,6 @@ function additem(item: ScriptIncome) {
   const index = globalHosts.findIndex((x) => x.host == item.host);
   if (index === -1) {
     globalHosts.push(item);
-  } else {
-    console.log("item exists");
   }
 }
 
@@ -42,6 +40,6 @@ function Render(ns: NS) {
   const row = "%-20s | %-12s | %s";
   ns.tprintf(row, "Host", "Script", "Income");
   globalHosts.forEach((item: ScriptIncome) => {
-    ns.tprintf(row, item.host, item.script, ns.nFormat(item.income, "$0.00a"));
+    ns.tprintf(row, item.host, item.script, formatMoney(ns, item.income));
   });
 }

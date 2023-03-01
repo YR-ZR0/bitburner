@@ -5,6 +5,7 @@
  */
 
 import { NS } from "@ns";
+import { formatMoney } from "./common";
 
 async function build(ns: NS) {
   const max = ns.getPurchasedServerMaxRam();
@@ -25,13 +26,13 @@ export async function main(ns: NS) {
   const currentMoney = ns.getPlayer().money;
   const calculated = await build(ns);
   // ns.tprint(calculated.values());
-  calculated.forEach((cost: number, element: number) => {
+  calculated.forEach((cost: number, ram: number) => {
     if (currentMoney / cost >= 1) {
       ns.tprintf(
-        "Ram %d can be bought %d times with cost %s",
-        element,
+        "Ram %S can be bought %d times with cost %s",
+        ns.formatRam(ram),
         currentMoney / cost,
-        ns.nFormat(cost, "$0.00a")
+        formatMoney(ns, cost)
       );
     }
   });

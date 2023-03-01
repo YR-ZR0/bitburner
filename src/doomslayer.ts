@@ -37,7 +37,7 @@ export function stopwatch(ns: NS, lastrun: Date) {
  * @param interval - time in ms to run on
  * @param initTime - the time that doomslayer started
  */
-export function daemon(ns: NS, interval: number, initTime: Date) {
+export function daemon(ns: NS, initTime: Date) {
   stopwatch(ns, initTime);
   ns.exec("ripntear.js", "home", 1, "--script", "selfHack.js");
 }
@@ -46,8 +46,9 @@ export function daemon(ns: NS, interval: number, initTime: Date) {
  *
  * @param {NS} ns */
 export async function main(ns: NS) {
+  ns.disableLog("exec");
+  ns.disableLog("sleep");
   const data = ns.flags([["interval", 5000]]);
-
   const interval = data.interval as number;
   // ns.disableLog("ALL");
   ns.print("Starting Daemon...");
@@ -56,7 +57,7 @@ export async function main(ns: NS) {
   // eslint-disable-next-line no-constant-condition
   while (true) {
     const initTime = new Date();
-    daemon(ns, interval, initTime);
+    daemon(ns, initTime);
     await ns.sleep(interval);
   }
 }

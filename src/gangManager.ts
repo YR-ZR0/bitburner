@@ -1,3 +1,4 @@
+import { formatMoney } from "common";
 /**
  * GangManager allows you to see at a glance stats about your gang and also handles
  * purchasing upgrades
@@ -28,7 +29,7 @@ function stattracker(ns: NS, general: GangGenInfo, keep: number) {
       row,
       memstat.name,
       memstat.task,
-      ns.nFormat(memstat.moneyGain, "$0.00a"),
+      formatMoney(ns, memstat.moneyGain),
       memberResult
     );
   });
@@ -36,10 +37,10 @@ function stattracker(ns: NS, general: GangGenInfo, keep: number) {
   ns.printf(addrow, "Held Money", "Wanted", "Power", "Territory");
   ns.printf(
     addrow,
-    ns.nFormat(keep, "$0.00a"),
-    ns.nFormat(general.wantedLevel, "0.00a"),
-    Math.floor(general.power),
-    general.territory
+    formatMoney(ns, keep),
+    ns.formatNumber(general.wantedLevel),
+    ns.formatNumber(general.power),
+    ns.formatPercent(general.territory)
   );
 }
 

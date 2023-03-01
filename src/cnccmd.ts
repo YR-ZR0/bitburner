@@ -1,7 +1,7 @@
 /**
  * WIP: to send update commands to the selfhack scripts to adjust different thresholds
  */
-import { cncCmd } from "./../CustomTypes.d";
+import { cncCmd } from "../types/CustomTypes";
 import { NS } from "@ns";
 
 export function autocomplete(data: {

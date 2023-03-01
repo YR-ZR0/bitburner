@@ -13,8 +13,33 @@
 
 import { NS } from "@ns";
 
+const stockGains = new Map();
+let total = 0;
+
 export function autocomplete(data: { flags: (arg0: string[][]) => unknown }) {
   return [data.flags([["keep"]])];
+}
+
+function getStocks(ns: NS) {
+  const allStocks = ns.stock.getSymbols();
+  allStocks.forEach((stock) => {
+    const stockData = ns.stock.getPosition(stock);
+    const gain = ns.stock.getSaleGain(stock, stockData[0], "Long");
+    if (stockData[0] != 0) {
+      stockGains.set(stock, gain);
+      total = total + gain;
+    }
+  });
+}
+
+function render(ns: NS) {
+  ns.clearLog();
+  const row = "%-5s | %-8s";
+  ns.printf(row, "Stock", "Gain");
+  stockGains.forEach((gain: number, stock: string) => {
+    ns.printf(row, stock, ns.nFormat(gain, "$0.00a"));
+  });
+  ns.printf("Total Gains are: %s", ns.nFormat(total, "$0.00a"));
 }
 
 export async function main(ns: NS) {
@@ -24,22 +49,25 @@ export async function main(ns: NS) {
   const stockVolPer = 0.02;
   const moneyKeep = data.keep as number;
   const minSharePer = 1;
+  ns.disableLog("ALL");
+
   // eslint-disable-next-line no-constant-condition
   while (true) {
-    ns.disableLog("ALL");
     const stocks = ns.stock.getSymbols().sort(function (a, b) {
       return ns.stock.getForecast(b) - ns.stock.getForecast(a);
     });
     for (const stock of stocks) {
       const position = ns.stock.getPosition(stock);
       if (position[0]) {
-        ns.printf("Position: %s", stock);
         sellPositions(stock, position);
       }
       buyPositions(stock, position);
     }
-    ns.print("Cycle Complete");
+    getStocks(ns);
+    render(ns);
     await ns.sleep(1000);
+    stockGains.clear();
+    total = 0;
   }
 
   /**
@@ -64,14 +92,6 @@ export async function main(ns: NS) {
           maxShares
         );
         ns.stock.buyStock(stock, shares);
-        ns.printf("Bought: %s", stock);
-        ns.printf(
-          "Forecast is %s shares: %d ask price: %s volatility: %s",
-          ns.nFormat(forecast, "(0.0%)"),
-          shares,
-          ns.nFormat(askPrice, "($0.0a)"),
-          ns.nFormat(volPer, "(0.0%)")
-        );
       }
     }
   }
@@ -84,7 +104,6 @@ export async function main(ns: NS) {
     const forecast = ns.stock.getForecast(stock);
     if (forecast < 0.5) {
       ns.stock.sellStock(stock, position[0]);
-      ns.printf("Sold: %s", stock);
     }
   }
 }

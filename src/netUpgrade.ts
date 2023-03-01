@@ -4,29 +4,27 @@
  * or you max out the pool of nodes,
  */
 
-import { UpgradeServer } from "./../CustomTypes.d";
-import { Hacknet, NS } from "@ns";
+import { formatMoney } from "common";
+import { UpgradeServer } from "../types/CustomTypes";
+import { NodeStats, NS } from "@ns";
+import { getBudget } from "./common";
 
-export function autocomplete(data: {
-  flags: (flags: string[][]) => string[][];
-}) {
-  return [data.flags([["keep"]])];
-}
+let balance = 0;
+let max = 0;
 
 /** @param {NS} ns **/
 export async function main(ns: NS) {
   ns.disableLog("ALL");
-  const data = ns.flags([["keep", 0]]);
-
   const poolSize = 100;
-  const keep: number = data.keep as number;
-  let fullNodes = 0;
+  balance = getBalance();
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    max = getBalance();
 
-  while (fullNodes != poolSize) {
-    const balance = getBalance();
-
-    if (canBuyNode(balance)) {
+    const [costNode, canNode] = canBuyNode(balance);
+    if (canNode) {
       ns.hacknet.purchaseNode();
+      deduct(costNode);
     }
 
     const nodes = getHackNetNodes();
@@ -37,22 +35,36 @@ export async function main(ns: NS) {
 
     displayStats();
 
-    fullNodes = countFullNodes();
-
     await ns.sleep(100);
   }
 
+  function deduct(price: number) {
+    if (balance > 0) {
+      balance = balance - price;
+    }
+  }
+  function increment(production: number) {
+    if (balance < max) {
+      balance = balance + production;
+    }
+  }
+
   function getBalance() {
-    return ns.getServerMoneyAvailable("home") - keep;
+    return getBudget(ns, "net") as number;
   }
 
-  function canBuyNode(balance: number) {
+  function canBuyNode(balance: number): [number, boolean] {
     const price = ns.hacknet.getPurchaseNodeCost();
-
-    return balance > price;
+    return [price, balance > price];
   }
 
-  function getHackNetNodes() {
+  function getHackNetNodes(): {
+    index: number;
+    node: NodeStats;
+    maxLevel: boolean;
+    maxRam: boolean;
+    maxCore: boolean;
+  }[] {
     const nodeCount = ns.hacknet.numNodes();
     const hNodes = [];
 
@@ -74,60 +86,39 @@ export async function main(ns: NS) {
   function displayStats() {
     ns.clearLog();
     ns.print("--- UPGRADING HACKNET NODES ---");
-    ns.printf("AVAILABLE: %s", ns.nFormat(getBalance(), "$0.00a"));
-    ns.printf("KEEP: %s", ns.nFormat(keep, "$0.00a"));
+    ns.printf("BUDGET: %s", formatMoney(ns, max));
+    ns.printf("AVAILABLE: %s", formatMoney(ns, balance));
     ns.printf("NUMBER OF NODES: %d OF %d", ns.hacknet.numNodes(), poolSize);
-    ns.printf("NUMBER OF FULL NODES: %d OF %d", fullNodes, poolSize);
-    ns.printf(
-      "Production rate is: %s",
-      ns.nFormat(totalProduction(), "$0.00a")
-    );
+    ns.printf("Production rate is: %s", formatMoney(ns, totalProduction()));
   }
 
   function upgradeNode(node: UpgradeServer, balance: number) {
     const stats = ["Level", "Ram", "Core"];
-
     stats.forEach((stat) => {
-      if (canUpgrade(stat, node, balance)) {
-        ns.printf("UPGRADING %s ON %s", stat, node.node.name);
+      const [cost, can] = canUpgrade(stat, node, balance);
+      ns.tprint(can);
+      if (can) {
         // @ts-expect-error Dynamic method call
         ns.hacknet["upgrade" + stat](node.index);
+        deduct(cost);
       }
     });
   }
-
-  function totalProduction(): number {
+  function totalProduction() {
     let total = 0;
     getHackNetNodes().forEach((host) => {
       total = total + host.node.production;
     });
+    increment(total);
     return total;
   }
 
   function canUpgrade(stat: string, node: UpgradeServer, balance: number) {
     // @ts-expect-error Dynamic method call
     const cost = ns.hacknet["get" + stat + "UpgradeCost"](node.index);
-
     if (cost == Infinity) {
-      // @ts-expect-error Dynamic stat look up
-      node["max" + stat] = true;
-
-      return false;
+      return [0, false];
     }
-
-    return balance > cost;
-  }
-
-  function countFullNodes() {
-    const nodes = getHackNetNodes();
-    let count = 0;
-
-    nodes.forEach((node) => {
-      if (node.maxCore && node.maxLevel && node.maxRam) {
-        count += 1;
-      }
-    });
-
-    return count;
+    return [cost, balance > cost];
   }
 }

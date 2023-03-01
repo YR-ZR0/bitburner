@@ -1,3 +1,4 @@
+import { formatMoney } from "common";
 import { CorporationInfo, NS } from "@ns";
 import { Office } from "./../../NetscriptDefinitions.d";
 interface Business {
@@ -62,10 +63,10 @@ function render(ns: NS) {
   ns.printf(CompanyRows, "Revenue", "Expend", "Funds", "Profit");
   ns.printf(
     CompanyRows,
-    ns.nFormat(corpInfo.revenue, "$0.00a"),
-    ns.nFormat(corpInfo.expenses, "$0.00a"),
-    ns.nFormat(corpInfo.funds, "$0.00a"),
-    ns.nFormat(corpInfo.revenue - corpInfo.expenses, "$0.00a")
+    formatMoney(ns, corpInfo.revenue),
+    formatMoney(ns, corpInfo.expenses),
+    formatMoney(ns, corpInfo.funds),
+    formatMoney(ns, corpInfo.revenue - corpInfo.expenses)
   );
   const BusinessRows = "%-15s | %-15s | %-8s | %-8s";
   ns.printf(BusinessRows, "Division", "Energy", "Morale", "Happiness");
@@ -74,9 +75,9 @@ function render(ns: NS) {
       ns.printf(
         BusinessRows,
         index,
-        Math.floor(office.avgEne),
-        Math.floor(office.avgMor),
-        Math.floor(office.avgHap)
+        ns.formatNumber(office.avgEne),
+        ns.formatNumber(office.avgMor),
+        ns.formatNumber(office.avgHap)
       );
     });
   });
