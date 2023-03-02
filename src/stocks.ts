@@ -1,10 +1,10 @@
+import { formatMoney } from "common";
 /**
  * stocks buys stocks based on the below parameters
  * @module stocks
  * @param maxSharePer - max share percentage to hit for that stock
  * @param stockBuyPer - Stock buy percentage
  * @param stockVolPer - stock volatility percentage
- * @param moneyKeep - money to keep
  * @param minSharePer - minimum amount of shares to buy
  * @remarks Built upon u/pwillia7 's stock script.
  * u/ferrus_aub stock script using simple portfolio algorithm.
@@ -12,13 +12,13 @@
  */
 
 import { NS } from "@ns";
+import { getBudget } from "./common";
 
 const stockGains = new Map();
 let total = 0;
-
-export function autocomplete(data: { flags: (arg0: string[][]) => unknown }) {
-  return [data.flags([["keep"]])];
-}
+let balance = 0;
+let max = 0;
+const commision = 100000;
 
 function getStocks(ns: NS) {
   const allStocks = ns.stock.getSymbols();
@@ -40,19 +40,19 @@ function render(ns: NS) {
     ns.printf(row, stock, ns.nFormat(gain, "$0.00a"));
   });
   ns.printf("Total Gains are: %s", ns.nFormat(total, "$0.00a"));
+  ns.printf("Balance: %s", formatMoney(ns, balance));
 }
 
 export async function main(ns: NS) {
-  const data = ns.flags([["keep", 10000000000]]);
   const maxSharePer = 10.0;
   const stockBuyPer = 0.2;
   const stockVolPer = 0.02;
-  const moneyKeep = data.keep as number;
   const minSharePer = 1;
   ns.disableLog("ALL");
-
+  balance = getBudget(ns, "stocks") as number;
   // eslint-disable-next-line no-constant-condition
   while (true) {
+    max = getBudget(ns, "stocks") as number;
     const stocks = ns.stock.getSymbols().sort(function (a, b) {
       return ns.stock.getForecast(b) - ns.stock.getForecast(a);
     });
@@ -70,6 +70,21 @@ export async function main(ns: NS) {
     total = 0;
   }
 
+  function deduct(price: number) {
+    if (balance > 0) {
+      balance = balance - price;
+    }
+  }
+  function increment(sold: number) {
+    if (balance < max) {
+      balance = balance + sold;
+    }
+
+    if (sold > max) {
+      balance = max;
+    }
+  }
+
   /**
    * buy a given stock
    * @param stock - Stock to buy
@@ -80,18 +95,12 @@ export async function main(ns: NS) {
     const askPrice = ns.stock.getAskPrice(stock);
     const forecast = ns.stock.getForecast(stock);
     const volPer = ns.stock.getVolatility(stock);
-    const playerMoney = ns.getServerMoneyAvailable("home");
 
     if (forecast >= stockBuyPer && volPer <= stockVolPer) {
-      if (
-        playerMoney - moneyKeep >
-        ns.stock.getPurchaseCost(stock, minSharePer, "Long")
-      ) {
-        const shares = Math.min(
-          (playerMoney - moneyKeep - 100000) / askPrice,
-          maxShares
-        );
-        ns.stock.buyStock(stock, shares);
+      if (balance > ns.stock.getPurchaseCost(stock, minSharePer, "Long")) {
+        const shares = Math.min((balance - commision) / askPrice, maxShares);
+        const bought = ns.stock.buyStock(stock, shares);
+        deduct(bought + commision);
       }
     }
   }
@@ -103,7 +112,8 @@ export async function main(ns: NS) {
   function sellPositions(stock: string, position: number[]) {
     const forecast = ns.stock.getForecast(stock);
     if (forecast < 0.5) {
-      ns.stock.sellStock(stock, position[0]);
+      const sold = ns.stock.sellStock(stock, position[0]);
+      increment(sold - commision);
     }
   }
 }
