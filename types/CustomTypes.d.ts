@@ -58,4 +58,5 @@ export interface CheckMark {
   item: string;
   component: "Stat" | "Host" | "Aug";
   done: boolean;
+  target?: string | number;
 }
