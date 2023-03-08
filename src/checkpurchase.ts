@@ -29,8 +29,9 @@ export async function main(ns: NS) {
   calculated.forEach((cost: number, ram: number) => {
     if (currentMoney / cost >= 1) {
       ns.tprintf(
-        "Ram %S can be bought %d times with cost %s",
+        "Ram %s (%s) can be bought %d times with cost %s",
         ns.formatRam(ram),
+        ram,
         currentMoney / cost,
         formatMoney(ns, cost)
       );

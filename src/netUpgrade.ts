@@ -96,7 +96,6 @@ export async function main(ns: NS) {
     const stats = ["Level", "Ram", "Core"];
     stats.forEach((stat) => {
       const [cost, can] = canUpgrade(stat, node, balance);
-      ns.tprint(can);
       if (can) {
         // @ts-expect-error Dynamic method call
         ns.hacknet["upgrade" + stat](node.index);

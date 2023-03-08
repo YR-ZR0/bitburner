@@ -18,7 +18,7 @@ const stockGains = new Map();
 let total = 0;
 let balance = 0;
 let max = 0;
-const commision = 100000;
+const commission = 100000;
 
 function getStocks(ns: NS) {
   const allStocks = ns.stock.getSymbols();
@@ -98,9 +98,9 @@ export async function main(ns: NS) {
 
     if (forecast >= stockBuyPer && volPer <= stockVolPer) {
       if (balance > ns.stock.getPurchaseCost(stock, minSharePer, "Long")) {
-        const shares = Math.min((balance - commision) / askPrice, maxShares);
+        const shares = Math.min((balance - commission) / askPrice, maxShares);
         const bought = ns.stock.buyStock(stock, shares);
-        deduct(bought + commision);
+        deduct(bought + commission);
       }
     }
   }
@@ -113,7 +113,7 @@ export async function main(ns: NS) {
     const forecast = ns.stock.getForecast(stock);
     if (forecast < 0.5) {
       const sold = ns.stock.sellStock(stock, position[0]);
-      increment(sold - commision);
+      increment(sold - commission);
     }
   }
 }
