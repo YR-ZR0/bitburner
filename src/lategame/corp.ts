@@ -1,3 +1,4 @@
+import { formatMoney } from "common";
 import { CorporationInfo, NS } from "@ns";
 import { Office } from "./../../NetscriptDefinitions.d";
 interface Business {
@@ -39,19 +40,19 @@ function optimiseOffices(ns: NS, regionals: Map<string, Business>) {
 
 function gather(ns: NS) {
   corpInfo = ns.corporation.getCorporation();
+  const officeArr: Office[] = [];
   let dustData: Business = {
     OfficeStats: [],
   };
   corpInfo.divisions.forEach((industry) => {
     const divisionData = ns.corporation.getDivision(industry);
-    divisionData.cities.forEach((City, index) => {
+    divisionData.cities.forEach((City) => {
       const officeData = ns.corporation.getOffice(industry, City);
-      const officeArr = [];
       officeArr.push(officeData);
-      dustData = {
-        OfficeStats: officeArr,
-      };
     });
+    dustData = {
+      OfficeStats: officeArr,
+    };
     regionals.set(industry, dustData);
   });
 }
@@ -62,21 +63,22 @@ function render(ns: NS) {
   ns.printf(CompanyRows, "Revenue", "Expend", "Funds", "Profit");
   ns.printf(
     CompanyRows,
-    ns.nFormat(corpInfo.revenue, "$0.00a"),
-    ns.nFormat(corpInfo.expenses, "$0.00a"),
-    ns.nFormat(corpInfo.funds, "$0.00a"),
-    ns.nFormat(corpInfo.revenue - corpInfo.expenses, "$0.00a")
+    formatMoney(ns, corpInfo.revenue),
+    formatMoney(ns, corpInfo.expenses),
+    formatMoney(ns, corpInfo.funds),
+    formatMoney(ns, corpInfo.revenue - corpInfo.expenses)
   );
-  const BusinessRows = "%-15s | %-15s | %-8s | %-8s";
-  ns.printf(BusinessRows, "Division", "Energy", "Morale", "Happiness");
+  const BusinessRows = "%-15s | %-15s | %-8s | %-8s | %-8s";
+  ns.printf(BusinessRows, "Division", "Energy", "Morale", "Happiness", "City");
   regionals.forEach((industry, index) => {
     industry.OfficeStats.forEach((office) => {
       ns.printf(
         BusinessRows,
         index,
-        Math.floor(office.avgEne),
-        Math.floor(office.avgMor),
-        Math.floor(office.avgHap)
+        ns.formatNumber(office.avgEne),
+        ns.formatNumber(office.avgMor),
+        ns.formatNumber(office.avgHap),
+        office.loc
       );
     });
   });

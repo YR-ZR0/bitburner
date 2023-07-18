@@ -2,19 +2,20 @@
  * storyui prints out a nice summary of how far you are through the milestones
  * @module
  */
-import { CheckMark } from "../../CustomTypes";
+import { CheckMark } from "../../types/CustomTypes";
 import { NS, Player } from "@ns";
+import { formatMoney } from "/common";
 // Total steps needed to be ready to ascend
 const maxProgress = 6;
 const storyHosts = ["CSEC", "avmnite-02h", "I.I.I.I", "run4theh111z"];
 const markers: CheckMark[] = [];
+const targetMoney = 100000000000;
+const targetSkill = 2500;
 
 function additem(item: CheckMark) {
   const index = markers.findIndex((x) => x.item == item.item);
   if (index === -1) {
     markers.push(item);
-  } else {
-    console.log("item exists");
   }
 }
 
@@ -32,16 +33,36 @@ function hostAssess(ns: NS) {
 function statAssess(ns: NS) {
   const stats: Player = ns.getPlayer();
   const moneyCurrent: number = stats.money;
-  if (moneyCurrent >= 100000000000) {
-    additem({ item: "Money met", done: true, component: "Stat" });
+  if (moneyCurrent >= targetMoney) {
+    additem({
+      item: "Money met",
+      done: true,
+      component: "Stat",
+      target: formatMoney(ns, targetMoney),
+    });
   } else {
-    additem({ item: "Money met", done: false, component: "Stat" });
+    additem({
+      item: "Money met",
+      done: false,
+      component: "Stat",
+      target: formatMoney(ns, targetMoney),
+    });
   }
   const skillCurrent: number = stats.skills.hacking;
-  if (skillCurrent >= 2500) {
-    additem({ item: "Skill met", done: true, component: "Stat" });
+  if (skillCurrent >= targetSkill) {
+    additem({
+      item: "Skill met",
+      done: true,
+      component: "Stat",
+      target: targetSkill,
+    });
   } else {
-    additem({ item: "Skill met", done: false, component: "Stat" });
+    additem({
+      item: "Skill met",
+      done: false,
+      component: "Stat",
+      target: targetSkill,
+    });
   }
 }
 
@@ -58,16 +79,16 @@ function genUI(ns: NS) {
       progress++;
     }
   });
-  cat.forEach((cata) => {
-    ns.tprintf("%s Checks", cata);
+  cat.forEach((category) => {
+    ns.tprintf("%s Checks", category);
     markers
-      .filter((x) => x.component == cata)
+      .filter((x) => x.component == category)
       .map((x) => {
-        ns.tprintf("%s %s", x.item, x.done);
+        ns.tprintf("%s %s %s", x.item, x.done, x?.target);
       });
-    ns.tprintf("%s", "\n");
+    ns.tprintf("%s", "----");
   });
-  ns.tprintf("%s", ns.nFormat(progress / maxProgress, "(0.00)%"));
+  ns.tprintf("Total: %s", ns.formatPercent(progress / maxProgress));
 }
 
 export async function main(ns: NS) {

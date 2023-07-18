@@ -4,8 +4,8 @@
  * @module common
  */
 
-import { actionFlags, cncCmd, parsePayload } from "./../CustomTypes.d";
-import { StatPayload, diffTime } from "./../CustomTypes.d";
+import { actionFlags, cncCmd, parsePayload } from "../types/CustomTypes";
+import { StatPayload, diffTime } from "../types/CustomTypes";
 import { NS } from "@ns";
 
 /**
@@ -25,6 +25,20 @@ export async function sendCommand(ns: NS, cmd: string) {
     key: "Enter",
     preventDefault: () => null,
   });
+}
+
+/**
+ * formatMoney returns a currency string. This replaces the nformat calls.
+ * @param ns - NS import
+ * @param value - value to transform
+ * @example
+ * formatMoney(ns,10000)
+ * "$ 10k"
+ * @returns "$ value suffix"
+ */
+
+export function formatMoney(ns: NS, value: number) {
+  return ns.sprintf("$ %s", ns.formatNumber(value));
 }
 
 /* eslint-disable no-empty */

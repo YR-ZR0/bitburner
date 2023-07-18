@@ -14,8 +14,8 @@ export async function main(ns: NS) {
     const inf = ns.infiltration.getInfiltration(loc[l].name);
     ns.tprintf(
       row,
-      ns.nFormat(inf.reward.tradeRep, "(0.00)a"),
-      ns.nFormat(inf.reward.SoARep, "(0.00)a"),
+      ns.formatNumber(inf.reward.tradeRep),
+      ns.formatNumber(inf.reward.SoARep),
       inf.location.name,
       inf.difficulty,
       inf.location.city

@@ -17,5 +17,5 @@ export async function main(ns: NS) {
   // eslint-disable-next-line prefer-rest-params
   const args_obj = arguments[0];
   const nNumber = args_obj.args[0];
-  ns.tprintf("%s", ns.nFormat(nNumber, "(0.0a)"));
+  ns.tprint(ns.formatNumber(nNumber));
 }

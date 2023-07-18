@@ -1,5 +1,5 @@
 {
-  "include": ["NetscriptDefinitions.d.ts", "CustomTypes.d.ts", "src/**/*"],
+  "include": ["NetscriptDefinitions.d.ts", "types/*", "src/**/*"],
   "exclude": ["arcade/**/*"],
   "compilerOptions": {
     "module": "ESNext",

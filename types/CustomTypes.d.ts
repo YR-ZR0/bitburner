@@ -1,4 +1,4 @@
-import { NodeStats } from "./NetscriptDefinitions.d";
+import { NodeStats } from "../NetscriptDefinitions";
 
 export interface StatPayload {
   host: string;
@@ -58,4 +58,5 @@ export interface CheckMark {
   item: string;
   component: "Stat" | "Host" | "Aug";
   done: boolean;
+  target?: string | number;
 }

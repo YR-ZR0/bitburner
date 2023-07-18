@@ -1,26 +1,22 @@
 /**
- * Try to buy everything from the darkweb
- * @alpha
+ * @module lategame/darkweb
+ * Try to buy everything from the darkweb.
  */
-
 import { NS } from "@ns";
 
+/** @param {NS} ns */
 export async function main(ns: NS) {
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    darkweb(ns);
-    await ns.sleep(60000);
-  }
+  darkweb(ns);
 }
 
+/** @param {NS} ns */
 function darkweb(ns: NS) {
   ns.singularity.purchaseTor();
-  ns.singularity.purchaseProgram("brutessh.exe");
-  ns.singularity.purchaseProgram("ftpcrack.exe");
-  ns.singularity.purchaseProgram("autolink.exe");
-  ns.singularity.purchaseProgram("deepscanv1.exe");
-  ns.singularity.purchaseProgram("relaysmtp.exe");
-  ns.singularity.purchaseProgram("httpworm.exe");
-  ns.singularity.purchaseProgram("deepscanv2.exe");
-  ns.singularity.purchaseProgram("sqlinject.exe");
+  const programs = ns.singularity.getDarkwebPrograms();
+  programs.forEach((prog) => {
+    const progCost = ns.singularity.getDarkwebProgramCost(prog);
+    if (progCost < ns.getPlayer().money) {
+      ns.singularity.purchaseProgram(prog);
+    }
+  });
 }
