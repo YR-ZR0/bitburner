@@ -1,6 +1,13 @@
+/**
+ * Does some management of corporations
+ * @module lategame/corp
+ * @alpha
+ */
+
 import { formatMoney } from "common";
 import { CorporationInfo, NS } from "@ns";
 import { Office } from "./../../NetscriptDefinitions.d";
+import { Division } from "@ns";
 interface Business {
   OfficeStats: Office[];
 }
@@ -45,7 +52,7 @@ function gather(ns: NS) {
     OfficeStats: [],
   };
   corpInfo.divisions.forEach((industry) => {
-    const divisionData = ns.corporation.getDivision(industry);
+    const divisionData: Division = ns.corporation.getDivision(industry);
     divisionData.cities.forEach((City) => {
       const officeData = ns.corporation.getOffice(industry, City);
       officeArr.push(officeData);
@@ -84,6 +91,20 @@ function render(ns: NS) {
   });
 }
 
+function optomiseWarehouses(ns: NS, regionals: Map<string, Business>) {
+  regionals.forEach((industry, index) => {
+    industry.OfficeStats.forEach((office) => {
+      const matList = ns.corporation.getConstants().materialNames;
+      matList.forEach((matName) => {
+        const matData = ns.corporation.getMaterial(index, office.loc, matName);
+        if (matData.prod != 0) {
+          ns.printf("%s %s %s", matData.name, matData.prod, matData.qty);
+        }
+      });
+    });
+  });
+}
+
 /** @param {NS} ns */
 export async function main(ns: NS) {
   ns.disableLog("ALL");
@@ -91,7 +112,9 @@ export async function main(ns: NS) {
   while (true) {
     gather(ns);
     optimiseOffices(ns, regionals);
+    // optomiseWarehouses(ns, regionals);
     render(ns);
     await ns.sleep(200);
+    // ns.clearLog();
   }
 }

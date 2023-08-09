@@ -24,7 +24,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">HackingFormulas</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3949</li></ul></aside>
+<li>Defined in ../NetscriptDefinitions.d.ts:3955</li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -33,6 +33,7 @@
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Methods</h3>
 <div class="tsd-index-list"><a href="___NetscriptDefinitions.HackingFormulas.html#growPercent" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-2048-path"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)" id="icon-2048-text"></path></svg><span>grow<wbr/>Percent</span></a>
+<a href="___NetscriptDefinitions.HackingFormulas.html#growThreads" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>grow<wbr/>Threads</span></a>
 <a href="___NetscriptDefinitions.HackingFormulas.html#growTime" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>grow<wbr/>Time</span></a>
 <a href="___NetscriptDefinitions.HackingFormulas.html#hackChance" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>hack<wbr/>Chance</span></a>
 <a href="___NetscriptDefinitions.HackingFormulas.html#hackExp" class="tsd-index-link tsd-kind-method tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>hack<wbr/>Exp</span></a>
@@ -48,6 +49,7 @@
 <li class="tsd-signature tsd-anchor-link" id="growPercent.growPercent-1">grow<wbr/>Percent<span class="tsd-signature-symbol">(</span>server<span class="tsd-signature-symbol">: </span><a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a>, threads<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, player<span class="tsd-signature-symbol">: </span><a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a>, cores<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#growPercent.growPercent-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Calculate the percent a server would grow to.
+Not exact due to limitations of mathematics.
 (Ex: 3.0 would would grow the server to 300% of its current value.)</p>
 
 <h3>Returns</h3><p>The calculated grow percent.</p>
@@ -57,7 +59,7 @@
 <ul class="tsd-parameter-list">
 <li>
 <h5>server: <a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a></h5>
-<div class="tsd-comment tsd-typography"><p>Server info from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
+<div class="tsd-comment tsd-typography"><p>Server info, typically from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
 </div></li>
 <li>
 <h5>threads: <span class="tsd-signature-type">number</span></h5>
@@ -65,7 +67,7 @@
 </div></li>
 <li>
 <h5>player: <a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a></h5>
-<div class="tsd-comment tsd-typography"><p>Player info from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
+<div class="tsd-comment tsd-typography"><p>Player info, typically from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
 </div></li>
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> cores: <span class="tsd-signature-type">number</span></h5>
@@ -73,7 +75,38 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3986</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3993</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="growThreads" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>grow<wbr/>Threads</span><a href="#growThreads" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+<li class="tsd-signature tsd-anchor-link" id="growThreads.growThreads-1">grow<wbr/>Threads<span class="tsd-signature-symbol">(</span>server<span class="tsd-signature-symbol">: </span><a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a>, player<span class="tsd-signature-symbol">: </span><a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a>, targetMoney<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, cores<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#growThreads.growThreads-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Calculate how many threads it will take to grow server to targetMoney. Starting money is server.moneyAvailable.</p>
+
+<h3>Returns</h3><p>The calculated grow threads as an integer, rounded up.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>server: <a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a></h5>
+<div class="tsd-comment tsd-typography"><p>Server info, typically from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
+</div></li>
+<li>
+<h5>player: <a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a></h5>
+<div class="tsd-comment tsd-typography"><p>Player info, typically from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
+</div></li>
+<li>
+<h5>targetMoney: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Desired final money, capped to server&#39;s moneyMax</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> cores: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number of cores on the computer that will execute grow.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in ../NetscriptDefinitions.d.ts:4002</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="growTime" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>grow<wbr/>Time</span><a href="#growTime" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -88,15 +121,15 @@
 <ul class="tsd-parameter-list">
 <li>
 <h5>server: <a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a></h5>
-<div class="tsd-comment tsd-typography"><p>Server info from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
+<div class="tsd-comment tsd-typography"><p>Server info, typically from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
 </div></li>
 <li>
 <h5>player: <a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a></h5>
-<div class="tsd-comment tsd-typography"><p>Player info from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
+<div class="tsd-comment tsd-typography"><p>Player info, typically from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:4000</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:4016</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="hackChance" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>hack<wbr/>Chance</span><a href="#hackChance" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -112,15 +145,15 @@
 <ul class="tsd-parameter-list">
 <li>
 <h5>server: <a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a></h5>
-<div class="tsd-comment tsd-typography"><p>Server info from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
+<div class="tsd-comment tsd-typography"><p>Server info, typically from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
 </div></li>
 <li>
 <h5>player: <a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a></h5>
-<div class="tsd-comment tsd-typography"><p>Player info from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
+<div class="tsd-comment tsd-typography"><p>Player info, typically from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3957</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3963</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="hackExp" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>hack<wbr/>Exp</span><a href="#hackExp" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -137,15 +170,15 @@
 <ul class="tsd-parameter-list">
 <li>
 <h5>server: <a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a></h5>
-<div class="tsd-comment tsd-typography"><p>Server info from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
+<div class="tsd-comment tsd-typography"><p>Server info, typically from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
 </div></li>
 <li>
 <h5>player: <a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a></h5>
-<div class="tsd-comment tsd-typography"><p>Player info from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
+<div class="tsd-comment tsd-typography"><p>Player info, typically from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3966</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3972</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="hackPercent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>hack<wbr/>Percent</span><a href="#hackPercent" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -163,15 +196,15 @@
 <ul class="tsd-parameter-list">
 <li>
 <h5>server: <a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a></h5>
-<div class="tsd-comment tsd-typography"><p>Server info from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
+<div class="tsd-comment tsd-typography"><p>Server info, typically from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
 </div></li>
 <li>
 <h5>player: <a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a></h5>
-<div class="tsd-comment tsd-typography"><p>Player info from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
+<div class="tsd-comment tsd-typography"><p>Player info, typically from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3976</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3982</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="hackTime" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>hack<wbr/>Time</span><a href="#hackTime" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -186,15 +219,15 @@
 <ul class="tsd-parameter-list">
 <li>
 <h5>server: <a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a></h5>
-<div class="tsd-comment tsd-typography"><p>Server info from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
+<div class="tsd-comment tsd-typography"><p>Server info, typically from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
 </div></li>
 <li>
 <h5>player: <a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a></h5>
-<div class="tsd-comment tsd-typography"><p>Player info from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
+<div class="tsd-comment tsd-typography"><p>Player info, typically from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3993</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:4009</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="weakenTime" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>weaken<wbr/>Time</span><a href="#weakenTime" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -209,15 +242,15 @@
 <ul class="tsd-parameter-list">
 <li>
 <h5>server: <a href="___NetscriptDefinitions.Server.html" class="tsd-signature-type" data-tsd-kind="Interface">Server</a></h5>
-<div class="tsd-comment tsd-typography"><p>Server info from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
+<div class="tsd-comment tsd-typography"><p>Server info, typically from <a href="___NetscriptDefinitions.NS.html#getServer">getServer</a></p>
 </div></li>
 <li>
 <h5>player: <a href="___NetscriptDefinitions.Person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a></h5>
-<div class="tsd-comment tsd-typography"><p>Player info from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
+<div class="tsd-comment tsd-typography"><p>Player info, typically from <a href="___NetscriptDefinitions.NS.html#getPlayer">getPlayer</a></p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:4007</li></ul></aside></li></ul></section></section></div>
+<li>Defined in ../NetscriptDefinitions.d.ts:4023</li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -239,21 +272,28 @@
 <ul>
 <li class="current"><a href="../modules.html">Bitburner scripts</a>
 <ul>
-<li class="tsd-kind-module"><a href="../modules/___CustomTypes.html">../<wbr/>Custom<wbr/>Types</a></li>
 <li class="current tsd-kind-module"><a href="../modules/___NetscriptDefinitions.html">../<wbr/>Netscript<wbr/>Definitions</a></li>
 <li class="tsd-kind-module"><a href="../modules/NoRam.html">No<wbr/>Ram</a></li>
 <li class="tsd-kind-module"><a href="../modules/NoRamServer.html">No<wbr/>Ram<wbr/>Server</a></li>
 <li class="tsd-kind-module"><a href="../modules/Story.html">Story</a></li>
 <li class="tsd-kind-module"><a href="../modules/aggressive.html">aggressive</a></li>
+<li class="tsd-kind-module"><a href="../modules/budgeteer.html">budgeteer</a></li>
 <li class="tsd-kind-module"><a href="../modules/checkPurchase.html">check<wbr/>Purchase</a></li>
 <li class="tsd-kind-module"><a href="../modules/clearQueue.html">clear<wbr/>Queue</a></li>
 <li class="tsd-kind-module"><a href="../modules/cnccmd.html">cnccmd</a></li>
 <li class="tsd-kind-module"><a href="../modules/common.html">common</a></li>
 <li class="tsd-kind-module"><a href="../modules/doomslayer.html">doomslayer</a></li>
 <li class="tsd-kind-module"><a href="../modules/find.html">find</a></li>
+<li class="tsd-kind-module"><a href="../modules/gangManager.html">gang<wbr/>Manager</a></li>
+<li class="tsd-kind-module"><a href="../modules/gangSender.html">gang<wbr/>Sender</a></li>
 <li class="tsd-kind-module"><a href="../modules/infiltrate.html">infiltrate</a></li>
 <li class="tsd-kind-module"><a href="../modules/killall.html">killall</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_StorySing.html">lategame/<wbr/>Story<wbr/>Sing</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_augPurchase.html">lategame/aug<wbr/>Purchase</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_corp.html">lategame/corp</a></li>
 <li class="tsd-kind-module"><a href="../modules/lategame_darkweb.html">lategame/darkweb</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_sleeves.html">lategame/sleeves</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_workhard.html">lategame/workhard</a></li>
 <li class="tsd-kind-module"><a href="../modules/listen.html">listen</a></li>
 <li class="tsd-kind-module"><a href="../modules/ls.html">ls</a></li>
 <li class="tsd-kind-module"><a href="../modules/makepurchase.html">makepurchase</a></li>
@@ -264,13 +304,15 @@
 <li class="tsd-kind-module"><a href="../modules/remoteKill.html">remote<wbr/>Kill</a></li>
 <li class="tsd-kind-module"><a href="../modules/ripntear.html">ripntear</a></li>
 <li class="tsd-kind-module"><a href="../modules/selfHack.html">self<wbr/>Hack</a></li>
+<li class="tsd-kind-module"><a href="../modules/selloff.html">selloff</a></li>
 <li class="tsd-kind-module"><a href="../modules/share.html">share</a></li>
 <li class="tsd-kind-module"><a href="../modules/solvers_factor.html">solvers/factor</a></li>
 <li class="tsd-kind-module"><a href="../modules/solvers_lzdecomp.html">solvers/lzdecomp</a></li>
 <li class="tsd-kind-module"><a href="../modules/solvers_maxarray.html">solvers/maxarray</a></li>
 <li class="tsd-kind-module"><a href="../modules/solvers_stockcalc.html">solvers/stockcalc</a></li>
-<li class="tsd-kind-module"><a href="../modules/stats_broker.html">stats/broker</a></li>
+<li class="tsd-kind-module"><a href="../modules/spendHashes.html">spend<wbr/>Hashes</a></li>
 <li class="tsd-kind-module"><a href="../modules/stats_figure.html">stats/figure</a></li>
+<li class="tsd-kind-module"><a href="../modules/stats_karma.html">stats/karma</a></li>
 <li class="tsd-kind-module"><a href="../modules/stats_monitor.html">stats/monitor</a></li>
 <li class="tsd-kind-module"><a href="../modules/stats_storyui.html">stats/storyui</a></li>
 <li class="tsd-kind-module"><a href="../modules/stocks.html">stocks</a></li></ul></li></ul></div></details></nav>
@@ -279,6 +321,7 @@
 <li class="current tsd-kind-interface tsd-parent-kind-module"><a href="___NetscriptDefinitions.HackingFormulas.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-256-path"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)" id="icon-256-text"></path></svg><span>Hacking<wbr/>Formulas</span></a>
 <ul>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.HackingFormulas.html#growPercent" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>grow<wbr/>Percent</a></li>
+<li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.HackingFormulas.html#growThreads" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>grow<wbr/>Threads</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.HackingFormulas.html#growTime" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>grow<wbr/>Time</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.HackingFormulas.html#hackChance" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>hack<wbr/>Chance</a></li>
 <li class="tsd-kind-method tsd-parent-kind-interface"><a href="___NetscriptDefinitions.HackingFormulas.html#hackExp" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>hack<wbr/>Exp</a></li>

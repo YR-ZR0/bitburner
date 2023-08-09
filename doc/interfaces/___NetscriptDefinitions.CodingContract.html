@@ -24,7 +24,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">CodingContract</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3181</li></ul></aside>
+<li>Defined in ../NetscriptDefinitions.d.ts:3201</li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -52,10 +52,7 @@
 <h3>Remarks</h3><p>RAM cost: 10 GB</p>
 <p>Attempts to solve the Coding Contract with the provided solution.</p>
 
-<h3>Example</h3><pre><code class="language-js"><span class="hl-6">// NS1</span><br/><span class="hl-5">var</span><span class="hl-0"> </span><span class="hl-3">reward</span><span class="hl-0"> = </span><span class="hl-3">codingcontract</span><span class="hl-0">.</span><span class="hl-1">attempt</span><span class="hl-0">(</span><span class="hl-3">yourSolution</span><span class="hl-0">, </span><span class="hl-3">filename</span><span class="hl-0">, </span><span class="hl-3">hostname</span><span class="hl-0">);</span><br/><span class="hl-2">if</span><span class="hl-0"> (</span><span class="hl-3">reward</span><span class="hl-0">) {</span><br/><span class="hl-0">  </span><span class="hl-1">tprint</span><span class="hl-0">(</span><span class="hl-4">&quot;Contract solved successfully! Reward: &quot;</span><span class="hl-0"> + </span><span class="hl-3">reward</span><span class="hl-0">)</span><br/><span class="hl-0">} </span><span class="hl-2">else</span><span class="hl-0"> </span><span class="hl-1">tprint</span><span class="hl-0">(</span><span class="hl-4">&quot;Failed to solve contract.&quot;</span><span class="hl-0">)</span>
-</code></pre>
-
-<h3>Example</h3><pre><code class="language-js"><span class="hl-6">// NS2</span><br/><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-8">reward</span><span class="hl-0"> = </span><span class="hl-3">codingcontract</span><span class="hl-0">.</span><span class="hl-1">attempt</span><span class="hl-0">(</span><span class="hl-3">yourSolution</span><span class="hl-0">, </span><span class="hl-3">filename</span><span class="hl-0">, </span><span class="hl-3">hostname</span><span class="hl-0">);</span><br/><span class="hl-2">if</span><span class="hl-0"> (</span><span class="hl-3">reward</span><span class="hl-0">) {</span><br/><span class="hl-0">  </span><span class="hl-3">ns</span><span class="hl-0">.</span><span class="hl-1">tprint</span><span class="hl-0">(</span><span class="hl-4">`Contract solved successfully! Reward: </span><span class="hl-5">${</span><span class="hl-3">reward</span><span class="hl-5">}</span><span class="hl-4">`</span><span class="hl-0">)</span><br/><span class="hl-0">} </span><span class="hl-2">else</span><span class="hl-0"> </span><span class="hl-3">ns</span><span class="hl-0">.</span><span class="hl-1">tprint</span><span class="hl-0">(</span><span class="hl-4">&quot;Failed to solve contract.&quot;</span><span class="hl-0">)</span>
+<h3>Example</h3><pre><code class="language-js"><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-6">reward</span><span class="hl-0"> = </span><span class="hl-4">codingcontract</span><span class="hl-0">.</span><span class="hl-2">attempt</span><span class="hl-0">(</span><span class="hl-4">yourSolution</span><span class="hl-0">, </span><span class="hl-4">filename</span><span class="hl-0">, </span><span class="hl-4">hostname</span><span class="hl-0">);</span><br/><span class="hl-3">if</span><span class="hl-0"> (</span><span class="hl-4">reward</span><span class="hl-0">) {</span><br/><span class="hl-0">  </span><span class="hl-4">ns</span><span class="hl-0">.</span><span class="hl-2">tprint</span><span class="hl-0">(</span><span class="hl-1">`Contract solved successfully! Reward: </span><span class="hl-5">${</span><span class="hl-4">reward</span><span class="hl-5">}</span><span class="hl-1">`</span><span class="hl-0">)</span><br/><span class="hl-0">} </span><span class="hl-3">else</span><span class="hl-0"> </span><span class="hl-4">ns</span><span class="hl-0">.</span><span class="hl-2">tprint</span><span class="hl-0">(</span><span class="hl-1">&quot;Failed to solve contract.&quot;</span><span class="hl-0">)</span>
 </code></pre>
 
 <h3>Returns</h3><p>A reward description string on success, or an empty string on failure.</p>
@@ -78,7 +75,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3212</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3223</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="createDummyContract" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>create<wbr/>Dummy<wbr/>Contract</span><a href="#createDummyContract" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -98,7 +95,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3278</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3289</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getContractType" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Contract<wbr/>Type</span><a href="#getContractType" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -125,7 +122,7 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3226</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3237</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getContractTypes" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Contract<wbr/>Types</span><a href="#getContractTypes" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -137,7 +134,7 @@
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3285</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3296</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Data</span><a href="#getData" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -165,7 +162,7 @@ This is just the data that the contract wants you to act on in order to solve th
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3254</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3265</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getDescription" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Description</span><a href="#getDescription" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -191,7 +188,7 @@ This is just the data that the contract wants you to act on in order to solve th
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3239</li></ul></aside></li></ul></section>
+<li>Defined in ../NetscriptDefinitions.d.ts:3250</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface"><a id="getNumTriesRemaining" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Num<wbr/>Tries<wbr/>Remaining</span><a href="#getNumTriesRemaining" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -217,7 +214,7 @@ This is just the data that the contract wants you to act on in order to solve th
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in ../NetscriptDefinitions.d.ts:3267</li></ul></aside></li></ul></section></section></div>
+<li>Defined in ../NetscriptDefinitions.d.ts:3278</li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -239,21 +236,28 @@ This is just the data that the contract wants you to act on in order to solve th
 <ul>
 <li class="current"><a href="../modules.html">Bitburner scripts</a>
 <ul>
-<li class="tsd-kind-module"><a href="../modules/___CustomTypes.html">../<wbr/>Custom<wbr/>Types</a></li>
 <li class="current tsd-kind-module"><a href="../modules/___NetscriptDefinitions.html">../<wbr/>Netscript<wbr/>Definitions</a></li>
 <li class="tsd-kind-module"><a href="../modules/NoRam.html">No<wbr/>Ram</a></li>
 <li class="tsd-kind-module"><a href="../modules/NoRamServer.html">No<wbr/>Ram<wbr/>Server</a></li>
 <li class="tsd-kind-module"><a href="../modules/Story.html">Story</a></li>
 <li class="tsd-kind-module"><a href="../modules/aggressive.html">aggressive</a></li>
+<li class="tsd-kind-module"><a href="../modules/budgeteer.html">budgeteer</a></li>
 <li class="tsd-kind-module"><a href="../modules/checkPurchase.html">check<wbr/>Purchase</a></li>
 <li class="tsd-kind-module"><a href="../modules/clearQueue.html">clear<wbr/>Queue</a></li>
 <li class="tsd-kind-module"><a href="../modules/cnccmd.html">cnccmd</a></li>
 <li class="tsd-kind-module"><a href="../modules/common.html">common</a></li>
 <li class="tsd-kind-module"><a href="../modules/doomslayer.html">doomslayer</a></li>
 <li class="tsd-kind-module"><a href="../modules/find.html">find</a></li>
+<li class="tsd-kind-module"><a href="../modules/gangManager.html">gang<wbr/>Manager</a></li>
+<li class="tsd-kind-module"><a href="../modules/gangSender.html">gang<wbr/>Sender</a></li>
 <li class="tsd-kind-module"><a href="../modules/infiltrate.html">infiltrate</a></li>
 <li class="tsd-kind-module"><a href="../modules/killall.html">killall</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_StorySing.html">lategame/<wbr/>Story<wbr/>Sing</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_augPurchase.html">lategame/aug<wbr/>Purchase</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_corp.html">lategame/corp</a></li>
 <li class="tsd-kind-module"><a href="../modules/lategame_darkweb.html">lategame/darkweb</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_sleeves.html">lategame/sleeves</a></li>
+<li class="tsd-kind-module"><a href="../modules/lategame_workhard.html">lategame/workhard</a></li>
 <li class="tsd-kind-module"><a href="../modules/listen.html">listen</a></li>
 <li class="tsd-kind-module"><a href="../modules/ls.html">ls</a></li>
 <li class="tsd-kind-module"><a href="../modules/makepurchase.html">makepurchase</a></li>
@@ -264,13 +268,15 @@ This is just the data that the contract wants you to act on in order to solve th
 <li class="tsd-kind-module"><a href="../modules/remoteKill.html">remote<wbr/>Kill</a></li>
 <li class="tsd-kind-module"><a href="../modules/ripntear.html">ripntear</a></li>
 <li class="tsd-kind-module"><a href="../modules/selfHack.html">self<wbr/>Hack</a></li>
+<li class="tsd-kind-module"><a href="../modules/selloff.html">selloff</a></li>
 <li class="tsd-kind-module"><a href="../modules/share.html">share</a></li>
 <li class="tsd-kind-module"><a href="../modules/solvers_factor.html">solvers/factor</a></li>
 <li class="tsd-kind-module"><a href="../modules/solvers_lzdecomp.html">solvers/lzdecomp</a></li>
 <li class="tsd-kind-module"><a href="../modules/solvers_maxarray.html">solvers/maxarray</a></li>
 <li class="tsd-kind-module"><a href="../modules/solvers_stockcalc.html">solvers/stockcalc</a></li>
-<li class="tsd-kind-module"><a href="../modules/stats_broker.html">stats/broker</a></li>
+<li class="tsd-kind-module"><a href="../modules/spendHashes.html">spend<wbr/>Hashes</a></li>
 <li class="tsd-kind-module"><a href="../modules/stats_figure.html">stats/figure</a></li>
+<li class="tsd-kind-module"><a href="../modules/stats_karma.html">stats/karma</a></li>
 <li class="tsd-kind-module"><a href="../modules/stats_monitor.html">stats/monitor</a></li>
 <li class="tsd-kind-module"><a href="../modules/stats_storyui.html">stats/storyui</a></li>
 <li class="tsd-kind-module"><a href="../modules/stocks.html">stocks</a></li></ul></li></ul></div></details></nav>

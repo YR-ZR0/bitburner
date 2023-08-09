@@ -74,8 +74,40 @@ export function hailMary(ns: NS, target: string) {
 
 /**
  * Map out the connection route to the given target.
+ * returns an array that can be looped over by {@link NetscriptDefinitions.Singularity.connect}
+ * @param tgt - target we want to reach
+ * @param ns {NS} - ns import
+ * @example
+ * Given the following path `home -> n00dles -> CSEC`
+ * ```
+ * // returns [n00dles,CSEC]
+ * singMap(ns,"CSEC")
+```
+ */
+export function singMap(ns: NS, tgt: string) {
+  ns.disableLog("ALL");
+  let temp = ns.scan(tgt);
+  let paths = [];
+  let prev = temp[0];
+  let done = 0;
+  while (done == 0) {
+    if (prev == "home") {
+      done = 1;
+    } else {
+      temp = ns.scan(prev);
+      paths.push(prev);
+      prev = temp[0];
+    }
+  }
+  paths = [tgt, ...paths];
+  return paths;
+}
+
+/**
+ * Map out the connection route to the given target.
  * returns a string that chain connects to each server needed to connect to the target
  * @param tgt - target we want to reach
+ * @param ns {NS} - ns
  * @example
  * Given the following path `home -> n00dles -> CSEC`
  * ```

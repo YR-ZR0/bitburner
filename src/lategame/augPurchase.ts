@@ -1,7 +1,8 @@
+
 import { NS } from "@ns";
 
 /** @param {NS} ns */
-export async function main(ns) {
+export async function main(ns: NS) {
   const gangFaction = ns.gang.getGangInformation().faction;
   const baseAugs = ns.singularity.getAugmentationsFromFaction(gangFaction);
   baseAugs.forEach((aug) => {

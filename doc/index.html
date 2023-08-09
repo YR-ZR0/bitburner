@@ -13,9 +13,10 @@
 <div class="tsd-page-title">
 <h2>Bitburner scripts</h2></div>
 <div class="tsd-panel tsd-typography">
-<a href="#typescript-template-for-bitburner39s-remote-file-api" id="typescript-template-for-bitburner39s-remote-file-api" style="color: inherit; text-decoration: none;">
-  <h1>Typescript template for Bitburner&#39;s Remote File API</h1>
+<a href="#typescript-bitburner-scripts" id="typescript-bitburner-scripts" style="color: inherit; text-decoration: none;">
+  <h1>Typescript bitburner scripts</h1>
 </a>
+<p>Cloned from <a href="https://github.com/bitburner-official/typescript-template">https://github.com/bitburner-official/typescript-template</a></p>
 <p>The official template for synchronizing Typescript/Javascript from your computer to the game.</p>
 <p><a href="BeginnersGuide.md">Step by step install</a></p>
 <p><a href="https://www.typescriptlang.org/docs/">Learn more about Typescript</a></p>
@@ -36,7 +37,7 @@ Due to the usage of the RFA system, it works with Web and Electron versions of t
   <h2>Quick start</h2>
 </a>
 <p>Download the template to your computer and install everything it requires:</p>
-<pre><code class="language-bash"><span class="hl-0">git clone https://github.com/bitburner-official/typescript-template</span><br/><span class="hl-1">cd</span><span class="hl-0"> typescript-template</span><br/><span class="hl-0">npm i</span>
+<pre><code class="language-bash"><span class="hl-0">git </span><span class="hl-1">clone</span><span class="hl-0"> </span><span class="hl-1">https://github.com/YR-ZR0/bitburner</span><br/><span class="hl-2">cd</span><span class="hl-0"> </span><span class="hl-1">bitburner</span><br/><span class="hl-0">npm </span><span class="hl-1">i</span>
 </code></pre>
 
 <a href="#how-to-use-this-template" id="how-to-use-this-template" style="color: inherit; text-decoration: none;">
@@ -48,6 +49,11 @@ Have it running in the background so that it all happens automatically.</p>
 <p>For Bitburner to receive any files, you need to enter the port <code>npm run watch</code> logs to the terminal
 in the Remote API section of the game settings, and press the connect button.</p>
 <p><a href="BeginnersGuide.md">See here for step by step installation</a> if you&#39;d like help with installing Node and/or connecting to the game.</p>
+
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h3>Documentation</h3>
+</a>
+<p>There are docs for each function where available. Feel free to PR in suggestions</p>
 
 <a href="#advanced" id="advanced" style="color: inherit; text-decoration: none;">
   <h2>Advanced</h2>
@@ -67,13 +73,13 @@ in the Remote API section of the game settings, and press the connect button.</p
   <h4>Examples</h4>
 </a>
 <p>To import <code>helperFunction</code> from the file <code>helpers.ts</code> located in the directory <code>src/lib/</code>:</p>
-<pre><code class="language-js"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-3">helperFunction</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-4">&quot;lib/helpers&quot;</span><span class="hl-0">;</span>
+<pre><code class="language-js"><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-4">helperFunction</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&quot;lib/helpers&quot;</span><span class="hl-0">;</span>
 </code></pre>
 <p>To import all functions from the file <code>helpers.ts</code> located in the <code>src/lib/</code> directory as the namespace <code>helpers</code>:</p>
-<pre><code class="language-js"><span class="hl-2">import</span><span class="hl-0"> </span><span class="hl-5">*</span><span class="hl-0"> </span><span class="hl-2">as</span><span class="hl-0"> </span><span class="hl-3">helpers</span><span class="hl-0"> </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-4">&quot;lib/helpers&quot;</span><span class="hl-0">;</span>
+<pre><code class="language-js"><span class="hl-3">import</span><span class="hl-0"> </span><span class="hl-5">*</span><span class="hl-0"> </span><span class="hl-3">as</span><span class="hl-0"> </span><span class="hl-4">helpers</span><span class="hl-0"> </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&quot;lib/helpers&quot;</span><span class="hl-0">;</span>
 </code></pre>
 <p>To import <code>someFunction</code> from the file <code>main.ts</code> located in the <code>src/</code> directory:</p>
-<pre><code class="language-js"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-3">someFunction</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-4">&quot;main&quot;</span><span class="hl-0">;</span>
+<pre><code class="language-js"><span class="hl-3">import</span><span class="hl-0"> { </span><span class="hl-4">someFunction</span><span class="hl-0"> } </span><span class="hl-3">from</span><span class="hl-0"> </span><span class="hl-1">&quot;main&quot;</span><span class="hl-0">;</span>
 </code></pre>
 
 <a href="#debugging" id="debugging" style="color: inherit; text-decoration: none;">
@@ -102,21 +108,28 @@ in the Remote API section of the game settings, and press the connect button.</p
 <ul>
 <li class="current selected"><a href="modules.html">Bitburner scripts</a>
 <ul>
-<li class="tsd-kind-module"><a href="modules/___CustomTypes.html">../<wbr/>Custom<wbr/>Types</a></li>
 <li class="tsd-kind-module"><a href="modules/___NetscriptDefinitions.html">../<wbr/>Netscript<wbr/>Definitions</a></li>
 <li class="tsd-kind-module"><a href="modules/NoRam.html">No<wbr/>Ram</a></li>
 <li class="tsd-kind-module"><a href="modules/NoRamServer.html">No<wbr/>Ram<wbr/>Server</a></li>
 <li class="tsd-kind-module"><a href="modules/Story.html">Story</a></li>
 <li class="tsd-kind-module"><a href="modules/aggressive.html">aggressive</a></li>
+<li class="tsd-kind-module"><a href="modules/budgeteer.html">budgeteer</a></li>
 <li class="tsd-kind-module"><a href="modules/checkPurchase.html">check<wbr/>Purchase</a></li>
 <li class="tsd-kind-module"><a href="modules/clearQueue.html">clear<wbr/>Queue</a></li>
 <li class="tsd-kind-module"><a href="modules/cnccmd.html">cnccmd</a></li>
 <li class="tsd-kind-module"><a href="modules/common.html">common</a></li>
 <li class="tsd-kind-module"><a href="modules/doomslayer.html">doomslayer</a></li>
 <li class="tsd-kind-module"><a href="modules/find.html">find</a></li>
+<li class="tsd-kind-module"><a href="modules/gangManager.html">gang<wbr/>Manager</a></li>
+<li class="tsd-kind-module"><a href="modules/gangSender.html">gang<wbr/>Sender</a></li>
 <li class="tsd-kind-module"><a href="modules/infiltrate.html">infiltrate</a></li>
 <li class="tsd-kind-module"><a href="modules/killall.html">killall</a></li>
+<li class="tsd-kind-module"><a href="modules/lategame_StorySing.html">lategame/<wbr/>Story<wbr/>Sing</a></li>
+<li class="tsd-kind-module"><a href="modules/lategame_augPurchase.html">lategame/aug<wbr/>Purchase</a></li>
+<li class="tsd-kind-module"><a href="modules/lategame_corp.html">lategame/corp</a></li>
 <li class="tsd-kind-module"><a href="modules/lategame_darkweb.html">lategame/darkweb</a></li>
+<li class="tsd-kind-module"><a href="modules/lategame_sleeves.html">lategame/sleeves</a></li>
+<li class="tsd-kind-module"><a href="modules/lategame_workhard.html">lategame/workhard</a></li>
 <li class="tsd-kind-module"><a href="modules/listen.html">listen</a></li>
 <li class="tsd-kind-module"><a href="modules/ls.html">ls</a></li>
 <li class="tsd-kind-module"><a href="modules/makepurchase.html">makepurchase</a></li>
@@ -127,13 +140,15 @@ in the Remote API section of the game settings, and press the connect button.</p
 <li class="tsd-kind-module"><a href="modules/remoteKill.html">remote<wbr/>Kill</a></li>
 <li class="tsd-kind-module"><a href="modules/ripntear.html">ripntear</a></li>
 <li class="tsd-kind-module"><a href="modules/selfHack.html">self<wbr/>Hack</a></li>
+<li class="tsd-kind-module"><a href="modules/selloff.html">selloff</a></li>
 <li class="tsd-kind-module"><a href="modules/share.html">share</a></li>
 <li class="tsd-kind-module"><a href="modules/solvers_factor.html">solvers/factor</a></li>
 <li class="tsd-kind-module"><a href="modules/solvers_lzdecomp.html">solvers/lzdecomp</a></li>
 <li class="tsd-kind-module"><a href="modules/solvers_maxarray.html">solvers/maxarray</a></li>
 <li class="tsd-kind-module"><a href="modules/solvers_stockcalc.html">solvers/stockcalc</a></li>
-<li class="tsd-kind-module"><a href="modules/stats_broker.html">stats/broker</a></li>
+<li class="tsd-kind-module"><a href="modules/spendHashes.html">spend<wbr/>Hashes</a></li>
 <li class="tsd-kind-module"><a href="modules/stats_figure.html">stats/figure</a></li>
+<li class="tsd-kind-module"><a href="modules/stats_karma.html">stats/karma</a></li>
 <li class="tsd-kind-module"><a href="modules/stats_monitor.html">stats/monitor</a></li>
 <li class="tsd-kind-module"><a href="modules/stats_storyui.html">stats/storyui</a></li>
 <li class="tsd-kind-module"><a href="modules/stocks.html">stocks</a></li></ul></li></ul></div></details></nav></div></div>
