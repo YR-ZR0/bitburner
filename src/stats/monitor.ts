@@ -14,7 +14,7 @@ export async function main(ns: NS) {
   // @ts-expect-error: Because a flag can be anything this throws an error but the data is correct
   if (flags._.length === 0 || flags.help) {
     ns.tprint(
-      "This script helps visualize the money and security of a server."
+      "This script helps visualize the money and security of a server.",
     );
     ns.tprint(`USAGE: run ${ns.getScriptName()} SERVER_NAME`);
     ns.tprint("Example:");
@@ -38,23 +38,23 @@ export async function main(ns: NS) {
       ` $_______: ${ns.formatNumber(money)} / ${ns.formatNumber(maxMoney)} (${(
         (money / maxMoney) *
         100
-      ).toFixed(2)}%)`
+      ).toFixed(2)}%)`,
     );
     ns.print(` security: +${(sec - minSec).toFixed(2)}`);
     ns.print(
       ` hack____: ${ns.tFormat(ns.getHackTime(server))} (t=${Math.ceil(
-        ns.hackAnalyzeThreads(server, money)
-      )})`
+        ns.hackAnalyzeThreads(server, money),
+      )})`,
     );
     ns.print(
       ` grow____: ${ns.tFormat(ns.getGrowTime(server))} (t=${Math.ceil(
-        ns.growthAnalyze(server, maxMoney / money)
-      )})`
+        ns.growthAnalyze(server, maxMoney / money),
+      )})`,
     );
     ns.print(
       ` weaken__: ${ns.tFormat(ns.getWeakenTime(server))} (t=${Math.ceil(
-        (sec - minSec) * 20
-      )})`
+        (sec - minSec) * 20,
+      )})`,
     );
 
     await ns.sleep(flags.refreshrate as number);

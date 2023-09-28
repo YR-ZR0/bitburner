@@ -8,15 +8,29 @@ import { NS } from "@ns";
 export async function main(ns: NS) {
   darkweb(ns);
 }
-
 /** @param {NS} ns */
 function darkweb(ns: NS) {
-  ns.singularity.purchaseTor();
-  const programs = ns.singularity.getDarkwebPrograms();
-  programs.forEach((prog) => {
-    const progCost = ns.singularity.getDarkwebProgramCost(prog);
-    if (progCost < ns.getPlayer().money) {
-      ns.singularity.purchaseProgram(prog);
+  const torBought = ns.singularity.purchaseTor();
+  let progBought = 0;
+  ns.toast(
+    ns.sprintf("Tor Bought %s", torBought),
+    torBought ? "success" : "error",
+  );
+  if (torBought) {
+    const programs = ns.singularity.getDarkwebPrograms();
+    programs.forEach((prog) => {
+      const progCost = ns.singularity.getDarkwebProgramCost(prog);
+      if (progCost < ns.getPlayer().money) {
+        const bought = ns.singularity.purchaseProgram(prog);
+        if (bought) {
+          progBought++;
+        }
+      }
+    });
+    if (progBought != 0) {
+      ns.toast(ns.sprintf("Progs bought %d", progBought));
+    } else {
+      ns.toast("No Programs Bought", "error");
     }
-  });
+  }
 }

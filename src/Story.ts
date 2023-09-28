@@ -46,9 +46,9 @@ export async function main(ns: NS) {
         "Do you want to start attacking %s with specs Level:%d and Ports:%d",
         host,
         specs.lvl,
-        specs.needed
+        specs.needed,
       ),
-      { type: "boolean" }
+      { type: "boolean" },
     );
     if (await ans) {
       ns.tprint("Proceeding");

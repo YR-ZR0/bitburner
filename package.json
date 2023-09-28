@@ -1,6 +1,6 @@
 {
   "name": "bitburner-typescript-template",
-  "version": "3.0.1",
+  "version": "3.0.4",
   "scripts": {
     "watch:transpile": "tsc -w --preserveWatchOutput",
     "watch:local": "node build/watch.js",
@@ -26,6 +26,8 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@types/express": "^4.17.17",
+    "express": "^4.18.2",
     "sprintf-js": "^1.1.2",
     "typedoc": "^0.23.26"
   }

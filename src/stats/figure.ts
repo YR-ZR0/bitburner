@@ -17,7 +17,7 @@ export async function main(ns: NS) {
   const grow_threads = ns.growthAnalyze(data.target as string, 2);
   const hack_threads = ns.hackAnalyzeThreads(
     data.target as string,
-    ns.getServerMoneyAvailable(data.target as string) / 2
+    ns.getServerMoneyAvailable(data.target as string) / 2,
   );
   const sec_increase =
     ns.hackAnalyzeSecurity(hack_threads) +
@@ -28,6 +28,6 @@ export async function main(ns: NS) {
     grow_threads,
     hack_threads,
     sec_increase,
-    weaken_threads
+    weaken_threads,
   );
 }

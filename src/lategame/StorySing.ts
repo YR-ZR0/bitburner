@@ -23,7 +23,7 @@ export async function main(ns: NS) {
   const targets = Object.keys(targetSpecs);
   for (let i = 0; i < targets.length; ++i) {
     const host = targets[i];
-    const path = singMap(ns, host).reverse()
+    const path = singMap(ns, host).reverse();
     ns.print(host);
     path.forEach((host: string) => {
       ns.singularity.connect(host);

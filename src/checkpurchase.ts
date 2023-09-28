@@ -33,7 +33,7 @@ export async function main(ns: NS) {
         ns.formatRam(ram),
         ram,
         currentMoney / cost,
-        formatMoney(ns, cost)
+        formatMoney(ns, cost),
       );
     }
   });

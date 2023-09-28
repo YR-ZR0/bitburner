@@ -45,7 +45,7 @@ function breakandenter(ns: NS, stats: Server) {
       "Can't break %s I need %u and player has %u",
       host,
       skillLevel,
-      playerLevel
+      playerLevel,
     );
   }
   if (assesment.skillcheck && assesment.should) {
